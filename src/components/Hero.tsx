@@ -1,13 +1,6 @@
 import { ArrowDown, Linkedin, Mail, Globe } from 'lucide-react';
 
 export default function Hero() {
-  // Add your certifications here. Replace the sample entries with exact badge URLs from Credly.
-  const certifications = [
-    // Example placeholders — replace with your actual Credly badge URLs and titles.
-    { title: 'Credly: View full profile', href: 'https://www.credly.com/users/guillermo-ortiz-figueroa' },
-    // { title: 'Certification Name 1', href: 'https://www.credly.com/badges/PUT-BADGE-ID-HERE' },
-    // { title: 'Certification Name 2', href: 'https://www.credly.com/badges/PUT-BADGE-ID-HERE' },
-  ];
 
   const GithubIcon = (props: any) => (
     <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6" {...props}>
