@@ -1,6 +1,32 @@
 import { ArrowDown, Linkedin, Mail, Globe } from 'lucide-react';
 
 export default function Hero() {
+  // Add your certifications here. Replace the sample entries with exact badge URLs from Credly.
+  const certifications = [
+    // Example placeholders — replace with your actual Credly badge URLs and titles.
+    { title: 'Credly: View full profile', href: 'https://www.credly.com/users/guillermo-ortiz-figueroa' },
+    // { title: 'Certification Name 1', href: 'https://www.credly.com/badges/PUT-BADGE-ID-HERE' },
+    // { title: 'Certification Name 2', href: 'https://www.credly.com/badges/PUT-BADGE-ID-HERE' },
+  ];
+
+  const GithubIcon = (props: any) => (
+    <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6" {...props}>
+      <path d="M12 .5a12 12 0 00-3.79 23.4c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.4-1.35-1.77-1.35-1.77-1.1-.75.08-.74.08-.74 1.22.09 1.86 1.25 1.86 1.25 1.08 1.85 2.84 1.32 3.53 1.01.11-.78.42-1.32.76-1.62-2.66-.3-5.46-1.33-5.46-5.92 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.4 11.4 0 016 0c2.28-1.55 3.29-1.23 3.29-1.23.66 1.65.24 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.6-2.81 5.61-5.49 5.91.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.82.58A12 12 0 0012 .5z" />
+    </svg>
+  );
+
+  const StackOverflowIcon = (props: any) => (
+    <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6" {...props}>
+      <path d="M17.5 20.5h-11v-3h11v3zm-8.9-4.2l7.6 1.7.6-3-7.6-1.7-.6 3zm1.3-5.3l6.9 3 1.2-2.9-6.9-3-1.2 2.9zm2.9-5.3l5.5 4.2 1.8-2.4-5.5-4.2-1.8 2.4zM6.2 17.8H4v-11h2.2v11z" />
+    </svg>
+  );
+
+  const CredlyIcon = (props: any) => (
+    <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6" {...props}>
+      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.77 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z" />
+    </svg>
+  );
+
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden">
       <div className="absolute inset-0 opacity-20">
@@ -23,7 +49,7 @@ export default function Hero() {
           </p>
           <p className="text-slate-400 mb-12">Based in Barcelona, Spain</p>
 
-          <div className="flex gap-6 justify-center mb-16">
+          <div className="flex gap-6 justify-center mb-6">
             <a
               href="https://www.linkedin.com/in/guillermoortizfigueroa"
               target="_blank"
@@ -45,6 +71,37 @@ export default function Hero() {
               className="p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
             >
               <Mail className="w-6 h-6" />
+            </a>
+
+            {/* New profiles: GitHub, StackOverflow, Credly */}
+            <a
+              href="https://github.com/gortizfigueroa"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
+              aria-label="GitHub"
+            >
+              <GithubIcon />
+            </a>
+
+            <a
+              href="https://stackoverflow.com/users/159218/guillermo"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
+              aria-label="Stack Overflow"
+            >
+              <StackOverflowIcon />
+            </a>
+
+            <a
+              href="https://www.credly.com/users/guillermo-ortiz-figueroa"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
+              aria-label="Credly"
+            >
+              <CredlyIcon />
             </a>
           </div>
         </div>
