@@ -15,7 +15,7 @@ export default function Experience() {
           
           {experiences.map((exp, index) => (
             <div key={index} className="relative pl-0 md:pl-20">
-              <div className="absolute left-0 md:left-5 top-2 w-7 h-7 bg-slate-900 rounded-full border-4 border-slate-50 shadow-lg" />
+              <div className="hidden md:block absolute left-0 md:left-5 top-2 w-7 h-7 bg-slate-900 rounded-full border-4 border-slate-50 shadow-lg" />
 
               <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 border border-slate-100">
                 <div className="flex flex-wrap items-start justify-between mb-4">
