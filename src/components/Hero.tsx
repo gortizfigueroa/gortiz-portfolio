@@ -95,6 +95,17 @@ export default function Hero() {
       <div className="relative z-10 w-full px-4 sm:px-6 py-12 sm:py-20 flex items-center justify-center min-h-screen">
         <div className="max-w-5xl mx-auto text-center w-full">
           <div className="animate-fade-in">
+            {/* Profile Picture */}
+            <div className="mb-6 sm:mb-8 flex justify-center">
+              <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full border-2 sm:border-4 border-white/30 overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <img
+                  src="/images/profile_pic.jpg"
+                  alt={t('hero.name')}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
             <h1 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-4 sm:mb-6 tracking-tight leading-tight">
               {t('hero.name')}
             </h1>
