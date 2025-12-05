@@ -1,23 +1,15 @@
-
-const languages = [
-  { flag: '🇪🇸', name: 'Spanish', level: 'Native' },
-  { flag: '/images/flags/catalonia.svg', name: 'Catalan', level: 'Fluent', isImage: true },
-  { flag: '🇬🇧', name: 'English', level: 'Fluent (Business)' },
-  { flag: '🇫🇷', name: 'French', level: 'B1 (Intermediate)' },
-  { flag: '🇩🇪', name: 'German', level: 'B1 (Intermediate)' },
-];
+import { useTranslation } from 'react-i18next';
 
 export default function Languages() {
+  const { t } = useTranslation();
+  const languages = t('languages.items', { returnObjects: true });
   return (
     <section className="py-20 px-6 bg-white">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-900">Languages</h2>
+        <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-900">{t('languages.title')}</h2>
 
         <p className="text-slate-600 mb-10 max-w-3xl">
-          Multilingual communication is a core asset for international leadership and cross‑functional collaboration.
-          Native Spanish, fluent Catalan and English (business level) enable effective stakeholder engagement across
-          Iberia and global teams. French and German are at a B1 conversational/intermediate level — suitable for
-          technical collaboration, travel and day‑to‑day interactions.
+          {t('languages.description')}
         </p>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
