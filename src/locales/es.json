@@ -2,174 +2,174 @@
     "changeLanguage": "Cambiar idioma",
     "hero": {
         "name": "Guillermo Ortiz",
-        "title": "Jefe de Ingeniería",
+        "title": "Head of Engineering",
         "description": "CTO | Director de Ingeniería | Arquitecto Empresarial",
         "location": "Con base en Barcelona, España",
         "linkedin": "LinkedIn",
         "website": "Sitio web",
-        "email": "Correo electrónico",
+        "email": "Correo",
         "github": "GitHub",
         "stackoverflow": "Stack Overflow",
         "credly": "Credly"
     },
     "about": {
-        "title": "Sobre Mí",
-        "intro": "Mi viaje comenzó como desarrollador full-stack en 2008, construyendo aplicaciones en Java, PHP y .NET. A lo largo de 16 años, he crecido progresivamente hacia la arquitectura empresarial y el liderazgo técnico, dándome cuenta de que mi mayor impacto proviene de habilitar a los equipos para construir sistemas excepcionales.",
-        "currentRole": "Hoy, como Jefe de Ingeniería en Flight Centre Travel Group, lidero a más de 100 ingenieros en mercados globales. Arquitecto plataformas nativas de la nube, impulso transformaciones organizacionales y fomento culturas donde la innovación y la excelencia prosperan.",
-        "approach": "Mi enfoque combina una profundidad técnica práctica, desde microservicios e infraestructura en la nube hasta seguridad y DevOps, con un liderazgo estratégico que alinea la excelencia en ingeniería con los objetivos empresariales.",
+        "title": "Sobre mí",
+        "intro": "Comencé mi carrera como desarrollador full-stack en 2008, trabajando con Java, PHP y .NET. Con más de 16 años de experiencia, he evolucionado hacia la arquitectura empresarial y el liderazgo técnico, descubrien­do que mi mayor impacto está en ayudar a los equipos a crear sistemas sólidos y escalables.",
+        "currentRole": "Actualmente, como Head of Engineering en Flight Centre Travel Group, lidero a más de 100 ingenieros en distintos mercados del mundo. Diseño plataformas cloud-native, impulso transformaciones organizativas y creo entornos donde la innovación y la excelencia tecnológica pueden crecer.",
+        "approach": "Mi enfoque combina profundidad técnica —microservicios, infraestructura cloud, seguridad y DevOps— con liderazgo estratégico orientado a alinear la ingeniería con los objetivos del negocio.",
         "enterpriseArchitecture": {
             "title": "Arquitectura Empresarial",
-            "description": "Experiencia en microservicios, sistemas nativos de la nube, ecosistemas orientados a API e infraestructura escalable"
+            "description": "Especialización en microservicios, sistemas cloud-native, ecosistemas basados en APIs e infraestructura escalable"
         },
         "globalTeamLeadership": {
-            "title": "Liderazgo de Equipos Globales",
-            "description": "Liderando equipos distribuidos en más de 6 continentes, impulsando la transformación organizacional y el desarrollo del talento"
+            "title": "Liderazgo Global",
+            "description": "Dirección de equipos distribuidos en más de 6 continentes, desarrollando talento y liderando transformaciones a gran escala"
         },
         "platformTransformation": {
-            "title": "Transformación de Plataforma",
-            "description": "Migraciones a la nube, seguridad y cumplimiento a gran escala (ISO27001, PCI DSS) e iniciativas de modernización a nivel empresarial"
+            "title": "Transformación de Plataformas",
+            "description": "Migraciones a la nube, seguridad y cumplimiento (ISO27001, PCI DSS) y programas de modernización empresarial"
         }
     },
     "experience": {
         "title": "Experiencia",
         "positions": [
             {
-                "title": "Jefe de Ingeniería",
+                "title": "Head of Engineering",
                 "company": "Flight Centre Travel Group",
-                "period": "Noviembre 2024 - Presente",
-                "description": "Liderando más de 100 ingenieros en mercados globales, impulsando la transformación global de plataformas, migración a la nube e iniciativas de seguridad/cumplimiento a escala.",
+                "period": "Noviembre 2024 - Actualidad",
+                "description": "Liderazgo de más de 100 ingenieros en mercados globales, impulsando la transformación de plataformas, la migración a la nube y la mejora continua de seguridad y cumplimiento.",
                 "highlights": [
-                    "Lideré a más de 100 ingenieros en España, Reino Unido, EE.UU., Suecia y Sudáfrica",
-                    "Impulsé la transformación organizacional a través de la reestructuración de equipos alineados con streams",
-                    "Arquitecté la migración a servicios gestionados en la nube y microservicios",
-                    "Implementé estándares de seguridad empresarial (ISO27001, PCI DSS)"
+                    "Gestión de equipos en España, Reino Unido, EE. UU., Suecia y Sudáfrica",
+                    "Reestructuración organizativa hacia equipos alineados por producto/stream",
+                    "Arquitectura y transición hacia servicios gestionados en la nube y microservicios",
+                    "Implementación de estándares de seguridad (ISO27001, PCI DSS)"
                 ]
             },
             {
-                "title": "CTO en FCM Lab",
+                "title": "CTO – FCM Lab",
                 "company": "Flight Centre Travel Group",
                 "period": "Octubre 2021 - Octubre 2024",
-                "description": "Lideré el centro de innovación regional como CTO, gestionando equipos de ingeniería, aseguramiento de calidad, infraestructura y datos. Impulsé múltiples iniciativas de arquitectura y seguridad.",
+                "description": "Responsable del hub regional de innovación como CTO, gestionando ingeniería, QA, infraestructuras y datos. Lideré iniciativas clave de arquitectura y seguridad.",
                 "highlights": [
-                    "Rediseñé la arquitectura a un ecosistema orientado a API con autorización OAuth2",
-                    "Mejoré la seguridad de la plataforma: DevSecOps, pruebas DR/HA/BCP, anonimización de datos",
-                    "Implementé herramientas modernas: Kubernetes, Docker, DataDog, Snyk.io",
-                    "Construí participación entre equipos de Product, Operations, Security y Marketing"
+                    "Rediseño arquitectónico hacia un ecosistema API-first con autorización OAuth2",
+                    "Mejora de la seguridad: DevSecOps, pruebas DR/HA/BCP y anonimización de datos",
+                    "Implementación de herramientas modernas como Kubernetes, Docker, DataDog y Snyk.io",
+                    "Colaboración activa con equipos de Producto, Operaciones, Seguridad y Marketing"
                 ]
             },
             {
-                "title": "Gerente General - España",
+                "title": "General Manager – España",
                 "company": "TBSCG",
                 "period": "Febrero 2020 - Septiembre 2021",
-                "description": "Director de País para España, construyendo la práctica de consultoría AEM y liderando equipos multinacionales entregando transformaciones digitales empresariales.",
+                "description": "Director de la operación en España, desarrollando la práctica de consultoría AEM y liderando equipos multinacionales para grandes transformaciones digitales.",
                 "highlights": [
-                    "Lideré el equipo español y equipos distribuidos de más de 30 ingenieros",
-                    "Construí la práctica de consultoría de Adobe Experience Manager",
-                    "Gestioné cuentas clave incluyendo Herbalife, El Corte Inglés y Nikon",
-                    "Entregué transformaciones empresariales para clientes globales"
+                    "Dirección de equipos locales y distribuidos de más de 30 ingenieros",
+                    "Creación de la práctica de Adobe Experience Manager en España",
+                    "Gestión de cuentas clave como Herbalife, El Corte Inglés y Nikon",
+                    "Entrega de proyectos enterprise para clientes globales"
                 ]
             },
             {
-                "title": "Líder del Centro de Desarrollo - España",
+                "title": "Development Centre Lead – España",
                 "company": "TBSCG",
                 "period": "Enero 2017 - Enero 2020",
-                "description": "Líder de Capítulo de Desarrollo para más de 30 ingenieros en múltiples stacks tecnológicos (Java, .NET, PHP). Impulsé la estrategia tecnológica y la entrega de soluciones empresariales.",
+                "description": "Liderazgo del capítulo de desarrollo para más de 30 ingenieros en tecnologías Java, .NET y PHP. Responsable de la estrategia tecnológica y de la entrega de soluciones empresariales.",
                 "highlights": [
-                    "Gestioné un equipo distribuido de más de 30 ingenieros en España y Europa",
-                    "Construí un nuevo equipo de Drupal para proyectos de la Unión Europea",
-                    "Entregué soluciones para clientes empresariales en energía, salud y telecomunicaciones",
-                    "Introduje modelo de carrera profesional y gestioné decisiones comerciales estratégicas"
+                    "Gestión de equipos distribuidos en España y Europa",
+                    "Creación del equipo de Drupal para proyectos de la Unión Europea",
+                    "Entrega de soluciones para los sectores energía, salud y telecomunicaciones",
+                    "Definición del modelo de carrera y decisiones estratégicas de negocio"
                 ]
             }
         ]
     },
     "certifications": {
         "title": "Certificaciones",
-        "description": "Certificaciones profesionales relevantes e insignias verificadas que demuestran experiencia en arquitectura en la nube, orquestación de contenedores, seguridad y cumplimiento. Haz clic en cada insignia para ver la evidencia verificada en Credly o por el organismo emisor.",
+        "description": "Certificaciones profesionales y credenciales verificadas que acreditan experiencia en arquitectura cloud, contenedores, seguridad y cumplimiento. Haz clic en cada insignia para ver la verificación oficial.",
         "items": [
             {
                 "title": "AWS Certified Solutions Architect – Associate",
                 "org": "Amazon Web Services",
                 "href": "https://www.credly.com/badges/b7c9fed3-a07b-4d73-bf07-bce48f77c07f",
-                "desc": "Diseño de sistemas distribuidos en AWS con mejores prácticas para escalabilidad y resiliencia.",
+                "desc": "Diseño de sistemas distribuidos en AWS con prácticas de escalabilidad y resiliencia.",
                 "icon": "Cloud"
             },
             {
                 "title": "AWS Certified Cloud Practitioner",
                 "org": "Amazon Web Services",
                 "href": "https://www.credly.com/badges/5e34ee99-e63d-46b2-8c5d-add3829a496e",
-                "desc": "Conocimiento fundamental de los servicios en la nube de AWS y mejores prácticas.",
+                "desc": "Conocimientos fundamentales de los servicios y conceptos de AWS.",
                 "icon": "Cloud"
             },
             {
                 "title": "Azure AI Engineer Associate",
                 "org": "Microsoft",
                 "href": "https://www.credly.com/badges/7b6fef3d-8c55-4e05-bca9-3b435ba21870",
-                "desc": "Diseño e implementación de soluciones de IA utilizando servicios de Azure AI.",
+                "desc": "Diseño e implementación de soluciones de IA con servicios de Azure AI.",
                 "icon": "Zap"
             },
             {
                 "title": "Azure Fundamentals",
                 "org": "Microsoft",
                 "href": "https://www.credly.com/badges/26cf01fa-08bb-4780-98bd-97373426805f",
-                "desc": "Conocimiento fundamental de los servicios en la nube de Azure y conceptos.",
+                "desc": "Fundamentos de servicios y conceptos de Azure.",
                 "icon": "Cloud"
             },
             {
                 "title": "Professional Scrum Master I",
                 "org": "Scrum.org",
                 "href": "https://www.credly.com/badges/d5f8654a-93be-47f4-b89a-8f2e6452008c",
-                "desc": "Experiencia en metodologías Agile y Scrum para liderazgo de equipos.",
+                "desc": "Conocimientos en metodologías Agile y Scrum para la gestión de equipos.",
                 "icon": "Users"
             },
             {
                 "title": "Magnolia Associate Developer Certificate",
                 "org": "Magnolia",
                 "href": "https://www.magnolia-cms.com/services/education/certification.html",
-                "desc": "Habilidades de desarrollo e implementación para la plataforma Magnolia CMS.",
+                "desc": "Certificación en desarrollo e implementación sobre Magnolia CMS.",
                 "icon": "FileText"
             },
             {
                 "title": "Adobe Certified Expert – AEM Sites Business Practitioner",
                 "org": "Adobe",
                 "href": "https://www.credly.com/badges/bee0ece2-05ab-4611-9da9-23b669f01d4f",
-                "desc": "Experiencia en prácticas comerciales de Adobe Experience Manager Sites.",
+                "desc": "Experiencia en prácticas de negocio con Adobe Experience Manager Sites.",
                 "icon": "Award"
             }
         ]
     },
     "skills": {
-        "title": "Habilidades y Experiencia",
+        "title": "Habilidades y experiencia",
         "categories": [
             {
-                "title": "Liderazgo y Empresa",
-                "skills": ["Construcción de Equipos", "Planificación Estratégica", "Diseño Organizacional", "Liderazgo de Equipos Globales", "Gestión de Partes Interesadas", "Gestión de P&L", "Agile/Scrum"]
+                "title": "Liderazgo y Gestión",
+                "skills": ["Creación de equipos", "Planificación estratégica", "Diseño organizativo", "Liderazgo global", "Gestión de stakeholders", "Gestión de P&L", "Agile/Scrum"]
             },
             {
-                "title": "Arquitectura y Nube",
-                "skills": ["Arquitectura de Microservicios", "Sistemas Orientados a Eventos", "Ecosistemas Orientados a API", "Migración a la Nube", "Infraestructura como Código", "Sistemas Nativos de la Nube", "Kubernetes"]
+                "title": "Arquitectura y Cloud",
+                "skills": ["Arquitectura de microservicios", "Sistemas event-driven", "Ecosistemas API-first", "Migración a la nube", "Infraestructura como código", "Cloud-native", "Kubernetes"]
             },
             {
                 "title": "Seguridad y Cumplimiento",
-                "skills": ["DevSecOps", "ISO27001", "PCI DSS", "Autorización OAuth2", "SBOM", "Anonimización de Datos", "Segregación de Acceso", "DR/HA/BCP"]
+                "skills": ["DevSecOps", "ISO27001", "PCI DSS", "OAuth2", "SBOM", "Anonimización de datos", "Segregación de accesos", "DR/HA/BCP"]
             },
             {
                 "title": "Tecnologías y Herramientas",
                 "skills": ["Java", "Python", ".NET", "PHP", "Docker", "Kubernetes", "AWS", "Azure", "DataDog", "GitHub", "Azure DevOps", "Airflow", "Kong", "Keycloak"]
             },
             {
-                "title": "Plataformas CMS y Empresariales",
+                "title": "CMS y Plataformas Empresariales",
                 "skills": ["Adobe AEM", "Magnolia CMS", "OpenText Teamsite", "Drupal", "Sitecore", "Umbraco"]
             },
             {
                 "title": "Metodologías",
-                "skills": ["Canalizaciones CI/CD", "Transformación Empresarial", "Reestructuración de Equipos", "Rediseño de Arquitectura", "Optimización de Rendimiento", "Liderazgo Técnico"]
+                "skills": ["Pipelines CI/CD", "Transformación empresarial", "Reestructuración de equipos", "Rediseño arquitectónico", "Optimización de rendimiento", "Liderazgo técnico"]
             }
         ]
     },
     "languages": {
         "title": "Idiomas",
-        "description": "La comunicación multilingüe es un activo central para el liderazgo internacional y la colaboración entre funciones. El español nativo, el catalán fluido e inglés (nivel empresarial) permiten una participación efectiva de las partes interesadas en Iberia y equipos globales. El francés y alemán están en nivel B1 conversacional/intermedio, adecuados para colaboración técnica, viajes e interacciones diarias.",
+        "description": "La comunicación multilingüe es clave para el liderazgo internacional y la colaboración entre equipos. Español nativo, catalán fluido e inglés profesional permiten interactuar eficazmente con equipos en Iberia y a nivel global. Francés y alemán en nivel B1, adecuados para colaboración técnica e interacción diaria.",
         "items": [
             {
                 "name": "Español",
@@ -184,7 +184,7 @@
             },
             {
                 "name": "Inglés",
-                "level": "Fluido (Empresarial)",
+                "level": "Fluido (Profesional)",
                 "flag": "🇬🇧"
             },
             {
@@ -200,35 +200,35 @@
         ]
     },
     "achievements": {
-        "title": "Logros Clave",
+        "title": "Logros destacados",
         "items": [
             {
-                "title": "Liderazgo de Equipos Globales",
-                "description": "Liderando más de 100 ingenieros en 6 países (España, Reino Unido, EE.UU., Suecia, Sudáfrica) con equipos distribuidos de alto rendimiento",
+                "title": "Liderazgo Global",
+                "description": "Dirección de más de 100 ingenieros en 6 países mediante equipos distribuidos y de alto rendimiento",
                 "color": "emerald"
             },
             {
-                "title": "Transformación de Plataforma",
-                "description": "Impulsé con éxito la transformación global de plataformas, la migración a la nube y la reestructuración organizacional a escala empresarial",
+                "title": "Transformación de Plataformas",
+                "description": "Liderazgo de migraciones a la nube, modernización tecnológica y reestructuración organizativa a escala global",
                 "color": "blue"
             },
             {
                 "title": "Seguridad y Cumplimiento",
-                "description": "Implementé estándares de seguridad empresarial incluyendo ISO27001, PCI DSS y prácticas integrales de DevSecOps",
+                "description": "Implantación de estándares corporativos como ISO27001, PCI DSS y prácticas de DevSecOps",
                 "color": "rose"
             },
             {
                 "title": "Excelencia en Arquitectura",
-                "description": "Arquitecté ecosistema orientado a API, sistema de autorización OAuth2 y migración a microservicios en contenedores gestionados en la nube",
+                "description": "Diseño de un ecosistema API-first, sistema de autorización OAuth2 y migración a microservicios gestionados en la nube",
                 "color": "amber"
             }
         ]
     },
     "contact": {
-        "title": "Póngase en Contacto",
-        "description": "Siempre abierto a discutir desafíos de ingeniería, oportunidades de mentoría e iniciativas estratégicas de tecnología. ¡Conectemos!",
+        "title": "Contacto",
+        "description": "Abierto a conversar sobre retos de ingeniería, mentoría o iniciativas tecnológicas estratégicas. ¡Encantado de conectar!",
         "email": {
-            "label": "Correo Electrónico",
+            "label": "Correo",
             "value": "guillermo@guillermoortiz.es"
         },
         "phone": {
@@ -237,11 +237,11 @@
         },
         "linkedin": {
             "label": "LinkedIn",
-            "value": "Conecta conmigo",
+            "value": "Conectar",
             "href": "https://www.linkedin.com/in/guillermoortizfigueroa"
         },
         "website": {
-            "label": "Sitio Web",
+            "label": "Sitio web",
             "value": "guillermoortiz.es",
             "href": "https://www.guillermoortiz.es"
         },
@@ -249,6 +249,6 @@
             "label": "Ubicación",
             "value": "Barcelona, España"
         },
-        "copyright": "© 2024 Guillermo Ortiz. Liderando la excelencia en ingeniería global."
+        "copyright": "© 2024 Guillermo Ortiz. Impulsando la excelencia en ingeniería global."
     }
 }
