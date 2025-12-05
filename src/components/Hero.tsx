@@ -1,6 +1,19 @@
 import { ArrowDown, Linkedin, Mail, Globe } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import { useState } from 'react';
+import '../i18n'; // Import the i18n configuration
 
 export default function Hero() {
+  const { t, i18n } = useTranslation();
+  const [isDropdownOpen, setDropdownOpen] = useState(false);
+
+  const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
+  };
+
+  const toggleDropdown = () => {
+    setDropdownOpen(!isDropdownOpen);
+  };
 
   const GithubIcon = (props: any) => (
     <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6" {...props}>
@@ -29,18 +42,45 @@ export default function Hero() {
         }} />
       </div>
 
+      {/* Language Dropdown */}
+      <div className="absolute top-4 right-4">
+        <button onClick={toggleDropdown} className="p-2 bg-white/10 rounded-lg hover:bg-white/20 transition-all duration-300">
+          {t('changeLanguage')}
+        </button>
+        {isDropdownOpen && (
+          <div className="absolute right-0 mt-2 bg-white/10 rounded-lg shadow-lg">
+            <button
+              onClick={() => changeLanguage('en')}
+              className="block px-4 py-2 hover:bg-white/20 transition-all duration-300"
+            >
+              English
+            </button>
+            <button
+              onClick={() => changeLanguage('es')}
+              className="block px-4 py-2 hover:bg-white/20 transition-all duration-300"
+            >
+              Español
+            </button>
+          </div>
+        )}
+      </div>
+
       <div className="relative z-10 max-w-5xl mx-auto px-6 py-20 text-center">
+        
         <div className="animate-fade-in">
+          
           <h1 className="text-6xl md:text-8xl font-bold mb-6 tracking-tight">
-            Guillermo Ortiz
+            {t('hero.name')}
           </h1>
           <p className="text-2xl md:text-3xl text-slate-300 mb-4">
-            Head of Engineering
+            {t('hero.title')}
           </p>
           <p className="text-lg md:text-xl text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed">
-            CTO | Director of Engineering | Enterprise Architect
+            {t('hero.description')}
           </p>
           <p className="text-slate-400 mb-12">Based in Barcelona, Spain</p>
+
+          
 
           <div className="flex gap-6 justify-center mb-6">
             <a
@@ -48,6 +88,7 @@ export default function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
+              aria-label={t('hero.linkedin')}
             >
               <Linkedin className="w-6 h-6" />
             </a>
@@ -56,23 +97,24 @@ export default function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
+              aria-label={t('hero.website')}
             >
               <Globe className="w-6 h-6" />
             </a>
             <a
               href="mailto:guillermo@guillermoortiz.es"
               className="p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
+              aria-label={t('hero.email')}
             >
               <Mail className="w-6 h-6" />
             </a>
 
-            {/* New profiles: GitHub, StackOverflow, Credly */}
             <a
               href="https://github.com/gortizfigueroa"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
-              aria-label="GitHub"
+              aria-label={t('hero.github')}
             >
               <GithubIcon />
             </a>
@@ -82,7 +124,7 @@ export default function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
-              aria-label="Stack Overflow"
+              aria-label={t('hero.stackoverflow')}
             >
               <StackOverflowIcon />
             </a>
@@ -92,7 +134,7 @@ export default function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
-              aria-label="Credly"
+              aria-label={t('hero.credly')}
             >
               <CredlyIcon />
             </a>

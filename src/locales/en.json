@@ -1,0 +1,44 @@
+{
+    "changeLanguage": "Change Language",
+    "hero": {
+        "name": "Guillermo Ortiz",
+        "title": "Head of Engineering",
+        "description": "CTO | Director of Engineering | Enterprise Architect",
+        "location": "Based in Barcelona, Spain",
+        "linkedin": "LinkedIn",
+        "website": "Website",
+        "email": "Email",
+        "github": "GitHub",
+        "stackoverflow": "Stack Overflow",
+        "credly": "Credly"
+    },
+    "about": {
+        "title": "About Me",
+        "intro": "My journey began as a full-stack developer in 2008, building applications across Java, PHP, and .NET. Over 16 years, I've progressively grown into enterprise architecture and technical leadership, realizing that my greatest impact comes from enabling teams to build exceptional systems.",
+        "currentRole": "Today, as Head of Engineering at Flight Centre Travel Group, I lead 100+ engineers across global markets. I architect cloud-native platforms, drive organizational transformations, and foster cultures where innovation and excellence thrive.",
+        "approach": "My approach merges hands-on technical depth—from microservices and cloud infrastructure to security and DevOps—with strategic leadership that aligns engineering excellence with business goals.",
+        "enterpriseArchitecture": {
+            "title": "Enterprise Architecture",
+            "description": "Expertise in microservices, cloud-native systems, API-oriented ecosystems, and scalable infrastructure"
+        },
+        "globalTeamLeadership": {
+            "title": "Global Team Leadership",
+            "description": "Leading distributed teams across 6+ continents, driving organizational transformation and talent development"
+        },
+        "platformTransformation": {
+            "title": "Platform Transformation",
+            "description": "Cloud migrations, security & compliance at scale (ISO27001, PCI DSS), and enterprise-wide modernization initiatives"
+        }
+    },
+    "experience": {
+        "title": "Experience",
+        "jobTitle1": "Head of Engineering",
+        "company1": "Flight Centre Travel Group",
+        "duration1": "2020 - Present",
+        "description1": "Leading a team of over 100 engineers across global markets, architecting cloud-native platforms, and driving organizational transformations.",
+        "jobTitle2": "Senior Software Engineer",
+        "company2": "Tech Solutions Inc.",
+        "duration2": "2018 - 2020",
+        "description2": "Developed scalable web applications and led a team of developers in agile methodologies."
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "changeLanguage": "Cambiar idioma",
+    "hero": {
+        "name": "Guillermo Ortiz",
+        "title": "Jefe de Ingeniería",
+        "description": "CTO | Director de Ingeniería | Arquitecto Empresarial",
+        "location": "Con base en Barcelona, España",
+        "linkedin": "LinkedIn",
+        "website": "Sitio web",
+        "email": "Correo electrónico",
+        "github": "GitHub",
+        "stackoverflow": "Stack Overflow",
+        "credly": "Credly"
+    },
+    "about": {
+        "title": "Sobre Mí",
+        "intro": "Mi viaje comenzó como desarrollador full-stack en 2008, construyendo aplicaciones en Java, PHP y .NET. A lo largo de 16 años, he crecido progresivamente hacia la arquitectura empresarial y el liderazgo técnico, dándome cuenta de que mi mayor impacto proviene de habilitar a los equipos para construir sistemas excepcionales.",
+        "currentRole": "Hoy, como Jefe de Ingeniería en Flight Centre Travel Group, lidero a más de 100 ingenieros en mercados globales. Arquitecto plataformas nativas de la nube, impulso transformaciones organizacionales y fomento culturas donde la innovación y la excelencia prosperan.",
+        "approach": "Mi enfoque combina una profundidad técnica práctica, desde microservicios e infraestructura en la nube hasta seguridad y DevOps, con un liderazgo estratégico que alinea la excelencia en ingeniería con los objetivos empresariales.",
+        "enterpriseArchitecture": {
+            "title": "Arquitectura Empresarial",
+            "description": "Experiencia en microservicios, sistemas nativos de la nube, ecosistemas orientados a API e infraestructura escalable"
+        },
+        "globalTeamLeadership": {
+            "title": "Liderazgo de Equipos Globales",
+            "description": "Liderando equipos distribuidos en más de 6 continentes, impulsando la transformación organizacional y el desarrollo del talento"
+        },
+        "platformTransformation": {
+            "title": "Transformación de Plataforma",
+            "description": "Migraciones a la nube, seguridad y cumplimiento a gran escala (ISO27001, PCI DSS) e iniciativas de modernización a nivel empresarial"
+        }
+    },
+    "experience": {
+        "title": "Experiencia",
+        "jobTitle1": "Jefe de Ingeniería",
+        "company1": "Flight Centre Travel Group",
+        "duration1": "2020 - Presente",
+        "description1": "Liderando un equipo de más de 100 ingenieros en mercados globales, arquitectando plataformas nativas de la nube y impulsando transformaciones organizacionales.",
+        "jobTitle2": "Ingeniero de Software Senior",
+        "company2": "Tech Solutions Inc.",
+        "duration2": "2018 - 2020",
+        "description2": "Desarrollé aplicaciones web escalables y lideré un equipo de desarrolladores en metodologías ágiles."
+    }
+}
