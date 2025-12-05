@@ -57,19 +57,20 @@ export default function Hero() {
       </div>
 
       {/* Language Dropdown */}
-      <div className="absolute top-6 right-6 z-50" ref={dropdownRef}>
+      <div className="absolute top-4 right-4 sm:top-6 sm:right-6 z-50" ref={dropdownRef}>
         <button
           onClick={toggleDropdown}
-          className="flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 border border-white/20 hover:border-white/40"
+          className="flex items-center gap-2 px-3 py-2 sm:px-4 text-xs sm:text-sm bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 border border-white/20 hover:border-white/40 font-medium"
         >
-          <GlobeIcon className="w-4 h-4" />
-          <span className="text-sm font-medium">{i18n.language.toUpperCase()}</span>
+          <GlobeIcon className="w-3 h-3 sm:w-4 sm:h-4" />
+          <span className="hidden sm:inline">{i18n.language.toUpperCase()}</span>
+          <span className="sm:hidden">{i18n.language === 'en' ? 'EN' : 'ES'}</span>
         </button>
         {isDropdownOpen && (
-          <div className="absolute right-0 mt-3 bg-slate-800/95 backdrop-blur-sm rounded-lg shadow-lg border border-white/20 overflow-hidden min-w-32">
+          <div className="absolute right-0 mt-2 bg-slate-800/95 backdrop-blur-sm rounded-lg shadow-lg border border-white/20 overflow-hidden min-w-28 sm:min-w-32 text-xs sm:text-sm">
             <button
               onClick={() => changeLanguage('en')}
-              className={`w-full px-4 py-2.5 text-sm font-medium text-left transition-all duration-200 ${
+              className={`w-full px-3 py-2 sm:px-4 sm:py-2.5 font-medium text-left transition-all duration-200 ${
                 i18n.language === 'en'
                   ? 'bg-emerald-500/30 text-emerald-100 border-l-2 border-emerald-500'
                   : 'text-slate-300 hover:bg-white/10'
@@ -79,7 +80,7 @@ export default function Hero() {
             </button>
             <button
               onClick={() => changeLanguage('es')}
-              className={`w-full px-4 py-2.5 text-sm font-medium text-left transition-all duration-200 border-t border-white/10 ${
+              className={`w-full px-3 py-2 sm:px-4 sm:py-2.5 font-medium text-left transition-all duration-200 border-t border-white/10 ${
                 i18n.language === 'es'
                   ? 'bg-emerald-500/30 text-emerald-100 border-l-2 border-emerald-500'
                   : 'text-slate-300 hover:bg-white/10'
@@ -91,55 +92,52 @@ export default function Hero() {
         )}
       </div>
 
-      <div className="relative z-10 max-w-5xl mx-auto px-6 py-20 text-center">
-        
-        <div className="animate-fade-in">
-          
-          <h1 className="text-6xl md:text-8xl font-bold mb-6 tracking-tight">
-            {t('hero.name')}
-          </h1>
-          <p className="text-2xl md:text-3xl text-slate-300 mb-4">
-            {t('hero.title')}
-          </p>
-          <p className="text-lg md:text-xl text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed">
-            {t('hero.description')}
-          </p>
-          <p className="text-slate-400 mb-12">Based in Barcelona, Spain</p>
+      <div className="relative z-10 w-full px-4 sm:px-6 py-12 sm:py-20 flex items-center justify-center min-h-screen">
+        <div className="max-w-5xl mx-auto text-center w-full">
+          <div className="animate-fade-in">
+            <h1 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-4 sm:mb-6 tracking-tight leading-tight">
+              {t('hero.name')}
+            </h1>
+            <p className="text-lg xs:text-xl sm:text-2xl md:text-3xl text-slate-300 mb-3 sm:mb-4">
+              {t('hero.title')}
+            </p>
+            <p className="text-sm xs:text-base sm:text-lg md:text-xl text-slate-400 mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed px-2">
+              {t('hero.description')}
+            </p>
+            <p className="text-xs xs:text-sm sm:text-base text-slate-400 mb-8 sm:mb-12">{t('hero.location')}</p>
 
-          
-
-          <div className="flex gap-6 justify-center mb-6">
+            <div className="flex flex-wrap gap-3 sm:gap-4 justify-center mb-6 sm:mb-8">
             <a
               href="https://www.linkedin.com/in/guillermoortizfigueroa"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
+              className="p-2.5 sm:p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
               aria-label={t('hero.linkedin')}
             >
-              <Linkedin className="w-6 h-6" />
+              <Linkedin className="w-5 h-5 sm:w-6 sm:h-6" />
             </a>
             <a
               href="https://www.guillermoortiz.es"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
+              className="p-2.5 sm:p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
               aria-label={t('hero.website')}
             >
-              <Globe className="w-6 h-6" />
+              <Globe className="w-5 h-5 sm:w-6 sm:h-6" />
             </a>
             <a
               href="mailto:guillermo@guillermoortiz.es"
-              className="p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
+              className="p-2.5 sm:p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
               aria-label={t('hero.email')}
             >
-              <Mail className="w-6 h-6" />
+              <Mail className="w-5 h-5 sm:w-6 sm:h-6" />
             </a>
 
             <a
               href="https://github.com/gortizfigueroa"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
+              className="p-2.5 sm:p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
               aria-label={t('hero.github')}
             >
               <GithubIcon />
@@ -149,7 +147,7 @@ export default function Hero() {
               href="https://stackoverflow.com/users/159218/guillermo"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
+              className="p-2.5 sm:p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
               aria-label={t('hero.stackoverflow')}
             >
               <StackOverflowIcon />
@@ -159,17 +157,18 @@ export default function Hero() {
               href="https://www.credly.com/users/guillermo-ortiz-figueroa"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
+              className="p-2.5 sm:p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
               aria-label={t('hero.credly')}
             >
               <CredlyIcon />
             </a>
           </div>
+          </div>
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <ArrowDown className="w-6 h-6 text-slate-400" />
+      <div className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+        <ArrowDown className="w-5 h-5 sm:w-6 sm:h-6 text-slate-400" />
       </div>
     </section>
   );
