@@ -1,35 +1,12 @@
-const skillCategories = [
-  {
-    title: 'Leadership & Enterprise',
-    skills: ['Team Building', 'Strategic Planning', 'Organizational Design', 'Global Team Leadership', 'Stakeholder Engagement', 'P&L Management', 'Agile/Scrum']
-  },
-  {
-    title: 'Architecture & Cloud',
-    skills: ['Microservices Architecture', 'Event-Driven Systems', 'API-Oriented Ecosystems', 'Cloud Migration', 'Infrastructure as Code', 'Cloud-Native Systems', 'Kubernetes']
-  },
-  {
-    title: 'Security & Compliance',
-    skills: ['DevSecOps', 'ISO27001', 'PCI DSS', 'OAuth2 Authorization', 'SBOM', 'Data Anonymization', 'Access Segregation', 'DR/HA/BCP']
-  },
-  {
-    title: 'Technologies & Tools',
-    skills: ['Java', 'Python', '.NET', 'PHP', 'Docker', 'Kubernetes', 'AWS', 'Azure', 'DataDog', 'GitHub', 'Azure DevOps', 'Airflow', 'Kong', 'Keycloak']
-  },
-  {
-    title: 'CMS & Enterprise Platforms',
-    skills: ['Adobe AEM', 'Magnolia CMS', 'OpenText Teamsite', 'Drupal', 'Sitecore', 'Umbraco']
-  },
-  {
-    title: 'Methodologies',
-    skills: ['CI/CD Pipelines', 'Enterprise Transformation', 'Team Restructuring', 'Architecture Redesign', 'Performance Optimization', 'Technical Leadership']
-  }
-];
+import { useTranslation } from 'react-i18next';
 
 export default function Skills() {
+  const { t } = useTranslation();
+  const skillCategories = t('skills.categories', { returnObjects: true });
   return (
     <section className="py-24 px-6 bg-slate-50">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-5xl font-bold mb-16 text-slate-900">Skills & Expertise</h2>
+        <h2 className="text-5xl font-bold mb-16 text-slate-900">{t('skills.title')}</h2>
 
         <div className="grid md:grid-cols-2 gap-6">
           {skillCategories.map((category, index) => (

@@ -1,58 +1,8 @@
 import { useTranslation } from 'react-i18next';
 
-const experiences = [
-  {
-    title: 'Head of Engineering',
-    company: 'Flight Centre Travel Group',
-    period: 'November 2024 - Present',
-    description: 'Leading 100+ engineers across global markets, driving global platform transformation, cloud migration, and security/compliance initiatives at scale.',
-    highlights: [
-      'Led 100+ engineers across Spain, UK, USA, Sweden, and South Africa',
-      'Drove organizational transformation through stream-aligned team restructuring',
-      'Architected migration to cloud-managed services and microservices',
-      'Implemented enterprise security standards (ISO27001, PCI DSS)'
-    ]
-  },
-  {
-    title: 'CTO at FCM Lab',
-    company: 'Flight Centre Travel Group',
-    period: 'October 2021 - October 2024',
-    description: 'Led regional innovation hub as CTO, managing engineering, QA, infrastructure, and data teams. Drove multiple architecture and security initiatives.',
-    highlights: [
-      'Redesigned architecture to API-oriented ecosystem with OAuth2 authorization',
-      'Enhanced platform security: DevSecOps, DR/HA/BCP testing, data anonymization',
-      'Implemented modern tooling: Kubernetes, Docker, DataDog, Snyk.io',
-      'Built engagement across Product, Operations, Security, and Marketing teams'
-    ]
-  },
-  {
-    title: 'General Manager - Spain',
-    company: 'TBSCG',
-    period: 'February 2020 - September 2021',
-    description: 'Country Director for Spain, building the AEM consulting practice and leading multinational teams delivering enterprise digital transformations.',
-    highlights: [
-      'Led Spanish team and distributed teams of 30+ engineers',
-      'Built Adobe Experience Manager consulting practice',
-      'Managed key accounts including Herbalife, El Corte Inglés, and Nikon',
-      'Delivered enterprise transformations for global clients'
-    ]
-  },
-  {
-    title: 'Development Centre Lead - Spain',
-    company: 'TBSCG',
-    period: 'January 2017 - January 2020',
-    description: 'Development Chapter Lead for 30+ engineers across multiple tech stacks (Java, .NET, PHP). Drove technology strategy and enterprise solution delivery.',
-    highlights: [
-      'Managed distributed team of 30+ engineers across Spain and Europe',
-      'Built new Drupal team for European Union projects',
-      'Delivered solutions for enterprise clients in energy, healthcare, telecom',
-      'Introduced career path model and managed strategic business decisions'
-    ]
-  }
-];
-
 export default function Experience() {
   const { t } = useTranslation();
+  const experiences = t('experience.positions', { returnObjects: true });
 
   return (
     <section className="py-24 px-6 bg-gray-50">

@@ -32,13 +32,223 @@
     },
     "experience": {
         "title": "Experience",
-        "jobTitle1": "Head of Engineering",
-        "company1": "Flight Centre Travel Group",
-        "duration1": "2020 - Present",
-        "description1": "Leading a team of over 100 engineers across global markets, architecting cloud-native platforms, and driving organizational transformations.",
-        "jobTitle2": "Senior Software Engineer",
-        "company2": "Tech Solutions Inc.",
-        "duration2": "2018 - 2020",
-        "description2": "Developed scalable web applications and led a team of developers in agile methodologies."
+        "positions": [
+            {
+                "title": "Head of Engineering",
+                "company": "Flight Centre Travel Group",
+                "period": "November 2024 - Present",
+                "description": "Leading 100+ engineers across global markets, driving global platform transformation, cloud migration, and security/compliance initiatives at scale.",
+                "highlights": [
+                    "Led 100+ engineers across Spain, UK, USA, Sweden, and South Africa",
+                    "Drove organizational transformation through stream-aligned team restructuring",
+                    "Architected migration to cloud-managed services and microservices",
+                    "Implemented enterprise security standards (ISO27001, PCI DSS)"
+                ]
+            },
+            {
+                "title": "CTO at FCM Lab",
+                "company": "Flight Centre Travel Group",
+                "period": "October 2021 - October 2024",
+                "description": "Led regional innovation hub as CTO, managing engineering, QA, infrastructure, and data teams. Drove multiple architecture and security initiatives.",
+                "highlights": [
+                    "Redesigned architecture to API-oriented ecosystem with OAuth2 authorization",
+                    "Enhanced platform security: DevSecOps, DR/HA/BCP testing, data anonymization",
+                    "Implemented modern tooling: Kubernetes, Docker, DataDog, Snyk.io",
+                    "Built engagement across Product, Operations, Security, and Marketing teams"
+                ]
+            },
+            {
+                "title": "General Manager - Spain",
+                "company": "TBSCG",
+                "period": "February 2020 - September 2021",
+                "description": "Country Director for Spain, building the AEM consulting practice and leading multinational teams delivering enterprise digital transformations.",
+                "highlights": [
+                    "Led Spanish team and distributed teams of 30+ engineers",
+                    "Built Adobe Experience Manager consulting practice",
+                    "Managed key accounts including Herbalife, El Corte Inglés, and Nikon",
+                    "Delivered enterprise transformations for global clients"
+                ]
+            },
+            {
+                "title": "Development Centre Lead - Spain",
+                "company": "TBSCG",
+                "period": "January 2017 - January 2020",
+                "description": "Development Chapter Lead for 30+ engineers across multiple tech stacks (Java, .NET, PHP). Drove technology strategy and enterprise solution delivery.",
+                "highlights": [
+                    "Managed distributed team of 30+ engineers across Spain and Europe",
+                    "Built new Drupal team for European Union projects",
+                    "Delivered solutions for enterprise clients in energy, healthcare, telecom",
+                    "Introduced career path model and managed strategic business decisions"
+                ]
+            }
+        ]
+    },
+    "certifications": {
+        "title": "Certifications",
+        "description": "Relevant professional certifications and verified badges demonstrating cloud architecture, container orchestration, security and compliance expertise. Click each badge to view the verified evidence on Credly or the issuing body.",
+        "items": [
+            {
+                "title": "AWS Certified Solutions Architect – Associate",
+                "org": "Amazon Web Services",
+                "href": "https://www.credly.com/badges/b7c9fed3-a07b-4d73-bf07-bce48f77c07f",
+                "desc": "Designing distributed systems on AWS with best practices for scalability and resilience.",
+                "icon": "Cloud"
+            },
+            {
+                "title": "AWS Certified Cloud Practitioner",
+                "org": "Amazon Web Services",
+                "href": "https://www.credly.com/badges/5e34ee99-e63d-46b2-8c5d-add3829a496e",
+                "desc": "Foundational knowledge of AWS cloud services and best practices.",
+                "icon": "Cloud"
+            },
+            {
+                "title": "Azure AI Engineer Associate",
+                "org": "Microsoft",
+                "href": "https://www.credly.com/badges/7b6fef3d-8c55-4e05-bca9-3b435ba21870",
+                "desc": "Design and implement AI solutions using Azure AI services.",
+                "icon": "Zap"
+            },
+            {
+                "title": "Azure Fundamentals",
+                "org": "Microsoft",
+                "href": "https://www.credly.com/badges/26cf01fa-08bb-4780-98bd-97373426805f",
+                "desc": "Foundational knowledge of Azure cloud services and concepts.",
+                "icon": "Cloud"
+            },
+            {
+                "title": "Professional Scrum Master I",
+                "org": "Scrum.org",
+                "href": "https://www.credly.com/badges/d5f8654a-93be-47f4-b89a-8f2e6452008c",
+                "desc": "Expertise in Agile and Scrum methodologies for team leadership.",
+                "icon": "Users"
+            },
+            {
+                "title": "Magnolia Associate Developer Certificate",
+                "org": "Magnolia",
+                "href": "https://www.magnolia-cms.com/services/education/certification.html",
+                "desc": "Development and implementation skills for Magnolia CMS platform.",
+                "icon": "FileText"
+            },
+            {
+                "title": "Adobe Certified Expert – AEM Sites Business Practitioner",
+                "org": "Adobe",
+                "href": "https://www.credly.com/badges/bee0ece2-05ab-4611-9da9-23b669f01d4f",
+                "desc": "Expertise in Adobe Experience Manager Sites business practices.",
+                "icon": "Award"
+            }
+        ]
+    },
+    "skills": {
+        "title": "Skills & Expertise",
+        "categories": [
+            {
+                "title": "Leadership & Enterprise",
+                "skills": ["Team Building", "Strategic Planning", "Organizational Design", "Global Team Leadership", "Stakeholder Engagement", "P&L Management", "Agile/Scrum"]
+            },
+            {
+                "title": "Architecture & Cloud",
+                "skills": ["Microservices Architecture", "Event-Driven Systems", "API-Oriented Ecosystems", "Cloud Migration", "Infrastructure as Code", "Cloud-Native Systems", "Kubernetes"]
+            },
+            {
+                "title": "Security & Compliance",
+                "skills": ["DevSecOps", "ISO27001", "PCI DSS", "OAuth2 Authorization", "SBOM", "Data Anonymization", "Access Segregation", "DR/HA/BCP"]
+            },
+            {
+                "title": "Technologies & Tools",
+                "skills": ["Java", "Python", ".NET", "PHP", "Docker", "Kubernetes", "AWS", "Azure", "DataDog", "GitHub", "Azure DevOps", "Airflow", "Kong", "Keycloak"]
+            },
+            {
+                "title": "CMS & Enterprise Platforms",
+                "skills": ["Adobe AEM", "Magnolia CMS", "OpenText Teamsite", "Drupal", "Sitecore", "Umbraco"]
+            },
+            {
+                "title": "Methodologies",
+                "skills": ["CI/CD Pipelines", "Enterprise Transformation", "Team Restructuring", "Architecture Redesign", "Performance Optimization", "Technical Leadership"]
+            }
+        ]
+    },
+    "languages": {
+        "title": "Languages",
+        "description": "Multilingual communication is a core asset for international leadership and cross‑functional collaboration. Native Spanish, fluent Catalan and English (business level) enable effective stakeholder engagement across Iberia and global teams. French and German are at a B1 conversational/intermediate level — suitable for technical collaboration, travel and day‑to‑day interactions.",
+        "items": [
+            {
+                "name": "Spanish",
+                "level": "Native",
+                "flag": "🇪🇸"
+            },
+            {
+                "name": "Catalan",
+                "level": "Fluent",
+                "flag": "/images/flags/catalonia.svg",
+                "isImage": true
+            },
+            {
+                "name": "English",
+                "level": "Fluent (Business)",
+                "flag": "🇬🇧"
+            },
+            {
+                "name": "French",
+                "level": "B1 (Intermediate)",
+                "flag": "🇫🇷"
+            },
+            {
+                "name": "German",
+                "level": "B1 (Intermediate)",
+                "flag": "🇩🇪"
+            }
+        ]
+    },
+    "achievements": {
+        "title": "Key Achievements",
+        "items": [
+            {
+                "title": "Global Team Leadership",
+                "description": "Leading 100+ engineers across 6 countries (Spain, UK, USA, Sweden, South Africa) with distributed, high-performing teams",
+                "color": "emerald"
+            },
+            {
+                "title": "Platform Transformation",
+                "description": "Successfully drove global platform transformation, cloud migration, and organizational restructuring at enterprise scale",
+                "color": "blue"
+            },
+            {
+                "title": "Security & Compliance",
+                "description": "Implemented enterprise security standards including ISO27001, PCI DSS, and comprehensive DevSecOps practices",
+                "color": "rose"
+            },
+            {
+                "title": "Architecture Excellence",
+                "description": "Architected API-oriented ecosystem, OAuth2 authorization system, and migration to cloud-managed containerized microservices",
+                "color": "amber"
+            }
+        ]
+    },
+    "contact": {
+        "title": "Get In Touch",
+        "description": "Always open to discussing engineering challenges, mentoring opportunities, and strategic technology initiatives. Let's connect!",
+        "email": {
+            "label": "Email",
+            "value": "guillermo@guillermoortiz.es"
+        },
+        "phone": {
+            "label": "Phone",
+            "value": "+34 680 577 753"
+        },
+        "linkedin": {
+            "label": "LinkedIn",
+            "value": "Connect with me",
+            "href": "https://www.linkedin.com/in/guillermoortizfigueroa"
+        },
+        "website": {
+            "label": "Website",
+            "value": "guillermoortiz.es",
+            "href": "https://www.guillermoortiz.es"
+        },
+        "location": {
+            "label": "Location",
+            "value": "Barcelona, Spain"
+        },
+        "copyright": "© 2024 Guillermo Ortiz. Leading global engineering excellence."
     }
 }

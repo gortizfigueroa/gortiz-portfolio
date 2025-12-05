@@ -1,31 +1,14 @@
+import { useTranslation } from 'react-i18next';
 import { Award, TrendingUp, Users, Shield, Globe, Zap } from 'lucide-react';
 
-const achievements = [
-  {
-    icon: Users,
-    title: 'Global Team Leadership',
-    description: 'Leading 100+ engineers across 6 countries (Spain, UK, USA, Sweden, South Africa) with distributed, high-performing teams',
-    color: 'emerald'
-  },
-  {
-    icon: Globe,
-    title: 'Platform Transformation',
-    description: 'Successfully drove global platform transformation, cloud migration, and organizational restructuring at enterprise scale',
-    color: 'blue'
-  },
-  {
-    icon: Shield,
-    title: 'Security & Compliance',
-    description: 'Implemented enterprise security standards including ISO27001, PCI DSS, and comprehensive DevSecOps practices',
-    color: 'rose'
-  },
-  {
-    icon: Zap,
-    title: 'Architecture Excellence',
-    description: 'Architected API-oriented ecosystem, OAuth2 authorization system, and migration to cloud-managed containerized microservices',
-    color: 'amber'
-  }
-];
+const iconMap: Record<string, any> = {
+  Users,
+  Globe,
+  Shield,
+  Zap,
+  Award,
+  TrendingUp,
+};
 
 const colorClasses: Record<string, { bg: string; icon: string; border: string; hover: string }> = {
   emerald: { bg: 'bg-emerald-50', icon: 'bg-emerald-500', border: 'border-emerald-100', hover: 'hover:border-emerald-300' },
@@ -35,14 +18,16 @@ const colorClasses: Record<string, { bg: string; icon: string; border: string; h
 };
 
 export default function Achievements() {
+  const { t } = useTranslation();
+  const achievements = t('achievements.items', { returnObjects: true });
   return (
     <section className="py-24 px-6 bg-slate-50">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-5xl font-bold mb-16 text-slate-900">Key Achievements</h2>
+        <h2 className="text-5xl font-bold mb-16 text-slate-900">{t('achievements.title')}</h2>
 
         <div className="grid md:grid-cols-2 gap-8">
-          {achievements.map((achievement, index) => {
-            const Icon = achievement.icon;
+          {achievements.map((achievement: any, index: number) => {
+            const Icon = iconMap[achievement.color === 'emerald' ? 'Users' : achievement.color === 'blue' ? 'Globe' : achievement.color === 'rose' ? 'Shield' : 'Zap'];
             const colors = colorClasses[achievement.color];
 
             return (
