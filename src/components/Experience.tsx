@@ -9,7 +9,10 @@ export default function Experience() {
       <div className="max-w-6xl mx-auto">
         <h2 className="text-5xl font-bold mb-12 text-slate-900">{t('experience.title')}</h2>
 
-        <div className="space-y-12">
+        <div className="space-y-12 relative">
+          {/* Vertical timeline line */}
+          <div className="hidden md:block absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-slate-900 via-slate-400 to-slate-200" />
+          
           {experiences.map((exp, index) => (
             <div key={index} className="relative pl-0 md:pl-20">
               <div className="absolute left-0 md:left-5 top-2 w-7 h-7 bg-slate-900 rounded-full border-4 border-slate-50 shadow-lg" />

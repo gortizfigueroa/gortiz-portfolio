@@ -1,19 +1,33 @@
-import { ArrowDown, Linkedin, Mail, Globe } from 'lucide-react';
+import { ArrowDown, Linkedin, Mail, Globe, Globe as GlobeIcon } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import '../i18n'; // Import the i18n configuration
 
 export default function Hero() {
   const { t, i18n } = useTranslation();
   const [isDropdownOpen, setDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);
+    setDropdownOpen(false);
   };
 
   const toggleDropdown = () => {
     setDropdownOpen(!isDropdownOpen);
   };
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   const GithubIcon = (props: any) => (
     <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6" {...props}>
@@ -43,23 +57,35 @@ export default function Hero() {
       </div>
 
       {/* Language Dropdown */}
-      <div className="absolute top-4 right-4">
-        <button onClick={toggleDropdown} className="p-2 bg-white/10 rounded-lg hover:bg-white/20 transition-all duration-300">
-          {t('changeLanguage')}
+      <div className="absolute top-6 right-6 z-50" ref={dropdownRef}>
+        <button
+          onClick={toggleDropdown}
+          className="flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 border border-white/20 hover:border-white/40"
+        >
+          <GlobeIcon className="w-4 h-4" />
+          <span className="text-sm font-medium">{i18n.language.toUpperCase()}</span>
         </button>
         {isDropdownOpen && (
-          <div className="absolute right-0 mt-2 bg-white/10 rounded-lg shadow-lg">
+          <div className="absolute right-0 mt-3 bg-slate-800/95 backdrop-blur-sm rounded-lg shadow-lg border border-white/20 overflow-hidden min-w-32">
             <button
               onClick={() => changeLanguage('en')}
-              className="block px-4 py-2 hover:bg-white/20 transition-all duration-300"
+              className={`w-full px-4 py-2.5 text-sm font-medium text-left transition-all duration-200 ${
+                i18n.language === 'en'
+                  ? 'bg-emerald-500/30 text-emerald-100 border-l-2 border-emerald-500'
+                  : 'text-slate-300 hover:bg-white/10'
+              }`}
             >
-              English
+              🇬🇧 English
             </button>
             <button
               onClick={() => changeLanguage('es')}
-              className="block px-4 py-2 hover:bg-white/20 transition-all duration-300"
+              className={`w-full px-4 py-2.5 text-sm font-medium text-left transition-all duration-200 border-t border-white/10 ${
+                i18n.language === 'es'
+                  ? 'bg-emerald-500/30 text-emerald-100 border-l-2 border-emerald-500'
+                  : 'text-slate-300 hover:bg-white/10'
+              }`}
             >
-              Español
+              🇪🇸 Español
             </button>
           </div>
         )}
