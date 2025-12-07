@@ -77,8 +77,8 @@ export default function Hero() {
             <button
               onClick={() => changeLanguage('en')}
               className={`w-full px-3 py-2 sm:px-4 sm:py-2.5 font-medium text-left transition-all duration-200 ${i18n.language === 'en'
-                  ? 'bg-emerald-500/30 text-emerald-100 border-l-2 border-emerald-500'
-                  : 'text-slate-300 hover:bg-white/10'
+                ? 'bg-emerald-500/30 text-emerald-100 border-l-2 border-emerald-500'
+                : 'text-slate-300 hover:bg-white/10'
                 }`}
             >
               🇬🇧 English
@@ -86,8 +86,8 @@ export default function Hero() {
             <button
               onClick={() => changeLanguage('es')}
               className={`w-full px-3 py-2 sm:px-4 sm:py-2.5 font-medium text-left transition-all duration-200 border-t border-white/10 ${i18n.language === 'es'
-                  ? 'bg-emerald-500/30 text-emerald-100 border-l-2 border-emerald-500'
-                  : 'text-slate-300 hover:bg-white/10'
+                ? 'bg-emerald-500/30 text-emerald-100 border-l-2 border-emerald-500'
+                : 'text-slate-300 hover:bg-white/10'
                 }`}
             >
               🇪🇸 Español
@@ -179,7 +179,7 @@ export default function Hero() {
               </a>
 
               <a
-                href="https://learn.microsoft.com/es-es/users/guillermoortizfigueroa-1988/"
+                href="https://learn.microsoft.com/users/guillermoortizfigueroa-1988/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"

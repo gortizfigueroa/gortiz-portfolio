@@ -92,50 +92,50 @@
                 "title": "AWS Certified Solutions Architect – Associate",
                 "org": "Amazon Web Services",
                 "href": "https://www.credly.com/badges/b7c9fed3-a07b-4d73-bf07-bce48f77c07f",
-                "desc": "Designing distributed systems on AWS with best practices for scalability and resilience.",
-                "icon": "Cloud"
+                "desc": "Validates comprehensive understanding of designing available, cost-efficient, fault-tolerant, and scalable distributed systems on AWS. Demonstrates ability to identify and define requirements for an AWS-based application and recommend best practices for secure and reliable architecture.",
+                "icon": "Cloudy"
             },
             {
                 "title": "AWS Certified Cloud Practitioner",
                 "org": "Amazon Web Services",
                 "href": "https://www.credly.com/badges/5e34ee99-e63d-46b2-8c5d-add3829a496e",
-                "desc": "Foundational knowledge of AWS cloud services and best practices.",
-                "icon": "Cloud"
+                "desc": "Demonstrates a fundamental understanding of IT services and their uses in the AWS Cloud. This certification verifies knowledge of cloud concepts, security, compliance, and the core AWS services that drive business value.",
+                "icon": "Cloudy"
             },
             {
                 "title": "Azure AI Engineer Associate",
                 "org": "Microsoft",
                 "href": "https://www.credly.com/badges/7b6fef3d-8c55-4e05-bca9-3b435ba21870",
-                "desc": "Design and implement AI solutions using Azure AI services.",
-                "icon": "Zap"
+                "desc": "Certifies expertise in building, managing, and deploying AI solutions that leverage Azure Cognitive Services and Azure Applied AI Services. Covers requirements definition, design, and implementation of AI solutions involving natural language processing, computer vision, and predictive analytics.",
+                "icon": "BrainCircuit"
             },
             {
                 "title": "Azure Fundamentals",
                 "org": "Microsoft",
                 "href": "https://www.credly.com/badges/26cf01fa-08bb-4780-98bd-97373426805f",
-                "desc": "Foundational knowledge of Azure cloud services and concepts.",
-                "icon": "Cloud"
+                "desc": "Validates foundational knowledge of cloud services and how those services are provided with Microsoft Azure. Covers cloud concepts, Azure workloads, security and privacy in Azure, as well as Azure pricing and support.",
+                "icon": "Cloudy"
             },
             {
                 "title": "Professional Scrum Master I",
                 "org": "Scrum.org",
                 "href": "https://www.credly.com/badges/d5f8654a-93be-47f4-b89a-8f2e6452008c",
-                "desc": "Expertise in Agile and Scrum methodologies for team leadership.",
-                "icon": "Users"
+                "desc": "Demonstrates a fundamental understanding of the Scrum framework and how to apply it to maximize the value delivered with a product. Verifies the ability to guide teams in Scrum usage and facilitate agile practices for continuous improvement.",
+                "icon": "UserStar"
             },
             {
                 "title": "Magnolia Associate Developer Certificate",
                 "org": "Magnolia",
                 "href": "https://www.magnolia-cms.com/services/education/certification.html",
-                "desc": "Development and implementation skills for Magnolia CMS platform.",
-                "icon": "FileText"
+                "desc": "Validates core competence in developing projects with Magnolia CMS, including template creation and module configuration. Demonstrates the ability to customize and extend the platform to meet specific enterprise content management needs.",
+                "icon": "Layers"
             },
             {
                 "title": "Adobe Certified Expert – AEM Sites Business Practitioner",
                 "org": "Adobe",
                 "href": "https://www.credly.com/badges/bee0ece2-05ab-4611-9da9-23b669f01d4f",
-                "desc": "Expertise in Adobe Experience Manager Sites business practices.",
-                "icon": "Award"
+                "desc": "Certifies the ability to define business requirements and drive the successful adoption of Adobe Experience Manager Sites. Focuses on leveraging AEM capabilities to create engaging digital experiences and optimize content management workflows.",
+                "icon": "Layers"
             }
         ]
     },

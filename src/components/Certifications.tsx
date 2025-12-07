@@ -1,12 +1,11 @@
 import { useTranslation } from 'react-i18next';
-import { Award, Cloud, Users, FileText, Zap } from 'lucide-react';
+import { Layers, Cloudy, UserStar, BrainCircuit } from 'lucide-react';
 
 const iconMap: Record<string, any> = {
-	Cloud,
-	Users,
-	FileText,
-	Zap,
-	Award,
+	Cloudy,
+	UserStar,
+	BrainCircuit,
+	Layers
 };
 
 export default function Certifications() {
