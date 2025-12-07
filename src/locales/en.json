@@ -10,7 +10,8 @@
         "email": "Email",
         "github": "GitHub",
         "stackoverflow": "Stack Overflow",
-        "credly": "Credly"
+        "credly": "Credly",
+        "microsoftlearn": "Microsoft Learn"
     },
     "about": {
         "title": "About Me",
@@ -143,27 +144,81 @@
         "categories": [
             {
                 "title": "Leadership & Enterprise",
-                "skills": ["Team Building", "Strategic Planning", "Organizational Design", "Global Team Leadership", "Stakeholder Engagement", "P&L Management", "Agile/Scrum"]
+                "skills": [
+                    "Team Building",
+                    "Strategic Planning",
+                    "Organizational Design",
+                    "Global Team Leadership",
+                    "Stakeholder Engagement",
+                    "P&L Management",
+                    "Agile/Scrum"
+                ]
             },
             {
                 "title": "Architecture & Cloud",
-                "skills": ["Microservices Architecture", "Event-Driven Systems", "API-Oriented Ecosystems", "Cloud Migration", "Infrastructure as Code", "Cloud-Native Systems", "Kubernetes"]
+                "skills": [
+                    "Microservices Architecture",
+                    "Event-Driven Systems",
+                    "API-Oriented Ecosystems",
+                    "Cloud Migration",
+                    "Infrastructure as Code",
+                    "Cloud-Native Systems",
+                    "Kubernetes"
+                ]
             },
             {
                 "title": "Security & Compliance",
-                "skills": ["DevSecOps", "ISO27001", "PCI DSS", "OAuth2 Authorization", "SBOM", "Data Anonymization", "Access Segregation", "DR/HA/BCP"]
+                "skills": [
+                    "DevSecOps",
+                    "ISO27001",
+                    "PCI DSS",
+                    "OAuth2 Authorization",
+                    "SBOM",
+                    "Data Anonymization",
+                    "Access Segregation",
+                    "DR/HA/BCP"
+                ]
             },
             {
                 "title": "Technologies & Tools",
-                "skills": ["Java", "Python", ".NET", "PHP", "Docker", "Kubernetes", "AWS", "Azure", "DataDog", "GitHub", "Azure DevOps", "Airflow", "Kong", "Keycloak"]
+                "skills": [
+                    "Java",
+                    "Python",
+                    ".NET",
+                    "PHP",
+                    "Docker",
+                    "Kubernetes",
+                    "AWS",
+                    "Azure",
+                    "DataDog",
+                    "GitHub",
+                    "Azure DevOps",
+                    "Airflow",
+                    "Kong",
+                    "Keycloak"
+                ]
             },
             {
                 "title": "CMS & Enterprise Platforms",
-                "skills": ["Adobe AEM", "Magnolia CMS", "OpenText Teamsite", "Drupal", "Sitecore", "Umbraco"]
+                "skills": [
+                    "Adobe AEM",
+                    "Magnolia CMS",
+                    "OpenText Teamsite",
+                    "Drupal",
+                    "Sitecore",
+                    "Umbraco"
+                ]
             },
             {
                 "title": "Methodologies",
-                "skills": ["CI/CD Pipelines", "Enterprise Transformation", "Team Restructuring", "Architecture Redesign", "Performance Optimization", "Technical Leadership"]
+                "skills": [
+                    "CI/CD Pipelines",
+                    "Enterprise Transformation",
+                    "Team Restructuring",
+                    "Architecture Redesign",
+                    "Performance Optimization",
+                    "Technical Leadership"
+                ]
             }
         ]
     },

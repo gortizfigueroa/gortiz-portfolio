@@ -47,6 +47,12 @@ export default function Hero() {
     </svg>
   );
 
+  const MicrosoftLearnIcon = (props: any) => (
+    <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6" {...props}>
+      <path d="M22 12.6001H12.5999V23.0001H22V12.6001ZM11.3999 23.0001H1.99988V12.6001H11.3999V23.0001ZM11.3999 1.00012H1.99988V11.4001H11.3999V1.00012ZM22 1.00012H12.5999V11.4001H22V1.00012Z" />
+    </svg>
+  );
+
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden">
       <div className="absolute inset-0 opacity-20">
@@ -70,21 +76,19 @@ export default function Hero() {
           <div className="absolute right-0 mt-2 bg-slate-800/95 backdrop-blur-sm rounded-lg shadow-lg border border-white/20 overflow-hidden min-w-28 sm:min-w-32 text-xs sm:text-sm">
             <button
               onClick={() => changeLanguage('en')}
-              className={`w-full px-3 py-2 sm:px-4 sm:py-2.5 font-medium text-left transition-all duration-200 ${
-                i18n.language === 'en'
+              className={`w-full px-3 py-2 sm:px-4 sm:py-2.5 font-medium text-left transition-all duration-200 ${i18n.language === 'en'
                   ? 'bg-emerald-500/30 text-emerald-100 border-l-2 border-emerald-500'
                   : 'text-slate-300 hover:bg-white/10'
-              }`}
+                }`}
             >
               🇬🇧 English
             </button>
             <button
               onClick={() => changeLanguage('es')}
-              className={`w-full px-3 py-2 sm:px-4 sm:py-2.5 font-medium text-left transition-all duration-200 border-t border-white/10 ${
-                i18n.language === 'es'
+              className={`w-full px-3 py-2 sm:px-4 sm:py-2.5 font-medium text-left transition-all duration-200 border-t border-white/10 ${i18n.language === 'es'
                   ? 'bg-emerald-500/30 text-emerald-100 border-l-2 border-emerald-500'
                   : 'text-slate-300 hover:bg-white/10'
-              }`}
+                }`}
             >
               🇪🇸 Español
             </button>
@@ -118,62 +122,72 @@ export default function Hero() {
             <p className="text-xs xs:text-sm sm:text-base text-slate-400 mb-8 sm:mb-12">{t('hero.location')}</p>
 
             <div className="flex flex-wrap gap-3 sm:gap-4 justify-center mb-6 sm:mb-8">
-            <a
-              href="https://www.linkedin.com/in/guillermoortizfigueroa"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2.5 sm:p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
-              aria-label={t('hero.linkedin')}
-            >
-              <Linkedin className="w-5 h-5 sm:w-6 sm:h-6" />
-            </a>
-            <a
-              href="https://www.guillermoortiz.es"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2.5 sm:p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
-              aria-label={t('hero.website')}
-            >
-              <Globe className="w-5 h-5 sm:w-6 sm:h-6" />
-            </a>
-            <a
-              href="mailto:guillermo@guillermoortiz.es"
-              className="p-2.5 sm:p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
-              aria-label={t('hero.email')}
-            >
-              <Mail className="w-5 h-5 sm:w-6 sm:h-6" />
-            </a>
+              <a
+                href="https://www.linkedin.com/in/guillermoortizfigueroa"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2.5 sm:p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
+                aria-label={t('hero.linkedin')}
+              >
+                <Linkedin className="w-5 h-5 sm:w-6 sm:h-6" />
+              </a>
+              <a
+                href="https://www.guillermoortiz.es"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2.5 sm:p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
+                aria-label={t('hero.website')}
+              >
+                <Globe className="w-5 h-5 sm:w-6 sm:h-6" />
+              </a>
+              <a
+                href="mailto:guillermo@guillermoortiz.es"
+                className="p-2.5 sm:p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
+                aria-label={t('hero.email')}
+              >
+                <Mail className="w-5 h-5 sm:w-6 sm:h-6" />
+              </a>
 
-            <a
-              href="https://github.com/gortizfigueroa"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2.5 sm:p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
-              aria-label={t('hero.github')}
-            >
-              <GithubIcon />
-            </a>
+              <a
+                href="https://github.com/gortizfigueroa"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2.5 sm:p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
+                aria-label={t('hero.github')}
+              >
+                <GithubIcon />
+              </a>
 
-            <a
-              href="https://stackoverflow.com/users/159218/guillermo"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2.5 sm:p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
-              aria-label={t('hero.stackoverflow')}
-            >
-              <StackOverflowIcon />
-            </a>
+              <a
+                href="https://stackoverflow.com/users/159218/guillermo"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2.5 sm:p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
+                aria-label={t('hero.stackoverflow')}
+              >
+                <StackOverflowIcon />
+              </a>
 
-            <a
-              href="https://www.credly.com/users/guillermo-ortiz-figueroa"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2.5 sm:p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
-              aria-label={t('hero.credly')}
-            >
-              <CredlyIcon />
-            </a>
-          </div>
+              <a
+                href="https://www.credly.com/users/guillermo-ortiz-figueroa"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
+                aria-label={t('hero.credly')}
+              >
+                <CredlyIcon />
+              </a>
+
+              <a
+                href="https://learn.microsoft.com/es-es/users/guillermoortizfigueroa-1988/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
+                aria-label={t('hero.microsoftlearn')}
+              >
+                <MicrosoftLearnIcon />
+              </a>
+            </div>
           </div>
         </div>
       </div>

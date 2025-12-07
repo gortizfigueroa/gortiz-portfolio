@@ -10,7 +10,8 @@
         "email": "Correo",
         "github": "GitHub",
         "stackoverflow": "Stack Overflow",
-        "credly": "Credly"
+        "credly": "Credly",
+        "microsoftlearn": "Microsoft Learn"
     },
     "about": {
         "title": "Sobre mí",
@@ -143,27 +144,81 @@
         "categories": [
             {
                 "title": "Liderazgo y Gestión",
-                "skills": ["Creación de equipos", "Planificación estratégica", "Diseño organizativo", "Liderazgo global", "Gestión de stakeholders", "Gestión de P&L", "Agile/Scrum"]
+                "skills": [
+                    "Creación de equipos",
+                    "Planificación estratégica",
+                    "Diseño organizativo",
+                    "Liderazgo global",
+                    "Gestión de stakeholders",
+                    "Gestión de P&L",
+                    "Agile/Scrum"
+                ]
             },
             {
                 "title": "Arquitectura y Cloud",
-                "skills": ["Arquitectura de microservicios", "Sistemas event-driven", "Ecosistemas API-first", "Migración a la nube", "Infraestructura como código", "Cloud-native", "Kubernetes"]
+                "skills": [
+                    "Arquitectura de microservicios",
+                    "Sistemas event-driven",
+                    "Ecosistemas API-first",
+                    "Migración a la nube",
+                    "Infraestructura como código",
+                    "Cloud-native",
+                    "Kubernetes"
+                ]
             },
             {
                 "title": "Seguridad y Cumplimiento",
-                "skills": ["DevSecOps", "ISO27001", "PCI DSS", "OAuth2", "SBOM", "Anonimización de datos", "Segregación de accesos", "DR/HA/BCP"]
+                "skills": [
+                    "DevSecOps",
+                    "ISO27001",
+                    "PCI DSS",
+                    "OAuth2",
+                    "SBOM",
+                    "Anonimización de datos",
+                    "Segregación de accesos",
+                    "DR/HA/BCP"
+                ]
             },
             {
                 "title": "Tecnologías y Herramientas",
-                "skills": ["Java", "Python", ".NET", "PHP", "Docker", "Kubernetes", "AWS", "Azure", "DataDog", "GitHub", "Azure DevOps", "Airflow", "Kong", "Keycloak"]
+                "skills": [
+                    "Java",
+                    "Python",
+                    ".NET",
+                    "PHP",
+                    "Docker",
+                    "Kubernetes",
+                    "AWS",
+                    "Azure",
+                    "DataDog",
+                    "GitHub",
+                    "Azure DevOps",
+                    "Airflow",
+                    "Kong",
+                    "Keycloak"
+                ]
             },
             {
                 "title": "CMS y Plataformas Empresariales",
-                "skills": ["Adobe AEM", "Magnolia CMS", "OpenText Teamsite", "Drupal", "Sitecore", "Umbraco"]
+                "skills": [
+                    "Adobe AEM",
+                    "Magnolia CMS",
+                    "OpenText Teamsite",
+                    "Drupal",
+                    "Sitecore",
+                    "Umbraco"
+                ]
             },
             {
                 "title": "Metodologías",
-                "skills": ["Pipelines CI/CD", "Transformación empresarial", "Reestructuración de equipos", "Rediseño arquitectónico", "Optimización de rendimiento", "Liderazgo técnico"]
+                "skills": [
+                    "Pipelines CI/CD",
+                    "Transformación empresarial",
+                    "Reestructuración de equipos",
+                    "Rediseño arquitectónico",
+                    "Optimización de rendimiento",
+                    "Liderazgo técnico"
+                ]
             }
         ]
     },
