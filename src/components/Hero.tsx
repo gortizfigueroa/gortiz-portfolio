@@ -1,4 +1,4 @@
-import { ArrowDown, Linkedin, Mail, Globe, Globe as GlobeIcon } from 'lucide-react';
+import { ArrowDown, Linkedin, Mail, Globe, Globe as GlobeIcon, FileText } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useState, useRef, useEffect } from 'react';
 import '../i18n'; // Import the i18n configuration
@@ -130,6 +130,15 @@ export default function Hero() {
                 aria-label={t('hero.linkedin')}
               >
                 <Linkedin className="w-5 h-5 sm:w-6 sm:h-6" />
+              </a>
+              <a
+                href="/Guillermo%20Ortiz%20-%20CV%202025_eng.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
+                aria-label={t('hero.cv')}
+              >
+                <FileText className="w-5 h-5 sm:w-6 sm:h-6" />
               </a>
               <a
                 href="https://www.guillermoortiz.es"
