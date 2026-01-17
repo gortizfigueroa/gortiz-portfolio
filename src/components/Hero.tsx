@@ -57,6 +57,8 @@ export default function Hero() {
     </svg>
   );
 
+  const socialButtonClass = "w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110";
+
   const handleShare = async () => {
     const shareData = {
       title: 'Guillermo Ortiz - Head of Engineering',
@@ -77,9 +79,36 @@ export default function Hero() {
   };
 
   const copyToClipboard = () => {
-    navigator.clipboard.writeText(APP_CONFIG.websiteUrl);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    const text = APP_CONFIG.websiteUrl;
+
+    // Fallback for browsers/contexts without navigator.clipboard (e.g. HTTP)
+    if (!navigator.clipboard) {
+      const textArea = document.createElement("textarea");
+      textArea.value = text;
+      textArea.style.position = "fixed";
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+
+      try {
+        document.execCommand('copy');
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+      } catch (err) {
+        console.error('Fallback: Oops, unable to copy', err);
+      }
+
+      document.body.removeChild(textArea);
+      return;
+    }
+
+    // Modern API
+    navigator.clipboard.writeText(text).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    }).catch(err => {
+      console.error('Async: Could not copy text: ', err);
+    });
   };
 
   const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(`Check out this portfolio: ${APP_CONFIG.websiteUrl}`)}`;
@@ -159,7 +188,7 @@ export default function Hero() {
                 href="https://www.linkedin.com/in/guillermoortizfigueroa"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2.5 sm:p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
+                className={socialButtonClass}
                 aria-label={t('hero.linkedin')}
               >
                 <Linkedin className="w-5 h-5 sm:w-6 sm:h-6" />
@@ -168,7 +197,7 @@ export default function Hero() {
                 href="/Guillermo%20Ortiz%20-%20CV%202025_eng.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
+                className={socialButtonClass}
                 aria-label={t('hero.cv')}
               >
                 <FileText className="w-5 h-5 sm:w-6 sm:h-6" />
@@ -177,14 +206,14 @@ export default function Hero() {
                 href={APP_CONFIG.websiteUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2.5 sm:p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
+                className={socialButtonClass}
                 aria-label={t('hero.website')}
               >
                 <Globe className="w-5 h-5 sm:w-6 sm:h-6" />
               </a>
               <a
                 href="mailto:guillermo@guillermoortiz.es"
-                className="p-2.5 sm:p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
+                className={socialButtonClass}
                 aria-label={t('hero.email')}
               >
                 <Mail className="w-5 h-5 sm:w-6 sm:h-6" />
@@ -194,7 +223,7 @@ export default function Hero() {
                 href="https://github.com/gortizfigueroa"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2.5 sm:p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
+                className={socialButtonClass}
                 aria-label={t('hero.github')}
               >
                 <GithubIcon />
@@ -204,7 +233,7 @@ export default function Hero() {
                 href="https://stackoverflow.com/users/159218/guillermo"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2.5 sm:p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
+                className={socialButtonClass}
                 aria-label={t('hero.stackoverflow')}
               >
                 <StackOverflowIcon />
@@ -214,7 +243,7 @@ export default function Hero() {
                 href="https://www.credly.com/users/guillermo-ortiz-figueroa"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
+                className={socialButtonClass}
                 aria-label={t('hero.credly')}
               >
                 <CredlyIcon />
@@ -224,7 +253,7 @@ export default function Hero() {
                 href="https://learn.microsoft.com/users/guillermoortizfigueroa-1988/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
+                className={socialButtonClass}
                 aria-label={t('hero.microsoftlearn')}
               >
                 <MicrosoftLearnIcon />
@@ -232,7 +261,7 @@ export default function Hero() {
 
               <button
                 onClick={handleShare}
-                className="p-2.5 sm:p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110 cursor-pointer"
+                className={`${socialButtonClass} cursor-pointer`}
                 aria-label={t('hero.share')}
               >
                 <Share2 className="w-5 h-5 sm:w-6 sm:h-6" />
