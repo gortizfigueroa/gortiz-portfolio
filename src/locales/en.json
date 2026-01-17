@@ -229,6 +229,38 @@
             }
         ]
     },
+    "education": {
+        "title": "Education",
+        "items": [
+            {
+                "degree": "Degree in Business Management and Administration",
+                "institution": "Universitat Autònoma de Barcelona",
+                "period": "2010 – 2014",
+                "icon": "/images/uab-logo.png",
+                "website": "https://www.uab.cat",
+                "isLogo": true,
+                "description": "Comprehensive training in strategic management, finance, and economics, providing a solid business foundation."
+            },
+            {
+                "degree": "Erasmus Programme",
+                "institution": "Leibniz Universität Hannover",
+                "period": "2013 – 2014",
+                "icon": "/images/luh-logo.png",
+                "website": "https://www.uni-hannover.de",
+                "isLogo": true,
+                "description": "International exchange focused on Business and Economics, enhancing cross-cultural communication and global business perspectives."
+            },
+            {
+                "degree": "Diploma in Computer Science",
+                "institution": "Universitat Politècnica de Catalunya",
+                "period": "2006 – 2010",
+                "icon": "/images/upc-logo.png",
+                "website": "https://www.upc.edu",
+                "isLogo": true,
+                "description": "Technical specialization in software engineering, algorithms, and system architecture."
+            }
+        ]
+    },
     "languages": {
         "title": "Languages",
         "description": "Multilingual communication is a core asset for international leadership and cross‑functional collaboration. Native Spanish, fluent Catalan and English (business level) enable effective stakeholder engagement across Iberia and global teams. French and German are at a B1 conversational/intermediate level — suitable for technical collaboration, travel and day‑to‑day interactions.",

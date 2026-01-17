@@ -229,6 +229,38 @@
             }
         ]
     },
+    "education": {
+        "title": "Formación Académica",
+        "items": [
+            {
+                "degree": "Grado en Administración y Dirección de Empresas",
+                "institution": "Universitat Autònoma de Barcelona",
+                "period": "2010 – 2014",
+                "icon": "/images/uab-logo.png",
+                "website": "https://www.uab.cat",
+                "isLogo": true,
+                "description": "Formación integral en dirección estratégica, finanzas y economía, proporcionando una sólida base empresarial."
+            },
+            {
+                "degree": "Programa Erasmus",
+                "institution": "Leibniz Universität Hannover",
+                "period": "2013 – 2014",
+                "icon": "/images/luh-logo.png",
+                "website": "https://www.uni-hannover.de",
+                "isLogo": true,
+                "description": "Intercambio internacional enfocado en Negocios y Economía, mejorando la comunicación intercultural y la perspectiva global."
+            },
+            {
+                "degree": "Ingeniería Técnica en Informática de Gestión",
+                "institution": "Universitat Politècnica de Catalunya",
+                "period": "2006 – 2010",
+                "icon": "/images/upc-logo.png",
+                "website": "https://www.upc.edu",
+                "isLogo": true,
+                "description": "Especialización técnica en ingeniería de software, algoritmos y arquitectura de sistemas."
+            }
+        ]
+    },
     "languages": {
         "title": "Idiomas",
         "description": "La comunicación multilingüe es clave para el liderazgo internacional y la colaboración entre equipos. Español nativo, catalán fluido e inglés profesional permiten interactuar eficazmente con equipos en Iberia y a nivel global. Francés y alemán en nivel B1, adecuados para colaboración técnica e interacción diaria.",

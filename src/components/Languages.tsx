@@ -4,7 +4,7 @@ export default function Languages() {
   const { t } = useTranslation();
   const languages = t('languages.items', { returnObjects: true });
   return (
-    <section className="py-20 px-6 bg-white">
+    <section className="py-20 px-6 bg-slate-50">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-900">{t('languages.title')}</h2>
 

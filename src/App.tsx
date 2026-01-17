@@ -4,6 +4,7 @@ import i18n from './i18n';
 import Hero from './components/Hero';
 import About from './components/About';
 import Experience from './components/Experience';
+import Education from './components/Education';
 import Certifications from './components/Certifications';
 import Skills from './components/Skills';
 import Achievements from './components/Achievements';
@@ -17,6 +18,7 @@ function App() {
       <Hero />
       <About />
       <Experience />
+      <Education />
       <Certifications />
       <Skills />
       <Languages />

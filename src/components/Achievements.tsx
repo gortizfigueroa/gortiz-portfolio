@@ -21,7 +21,7 @@ export default function Achievements() {
   const { t } = useTranslation();
   const achievements = t('achievements.items', { returnObjects: true });
   return (
-    <section className="py-24 px-6 bg-slate-50">
+    <section className="py-24 px-6 bg-white">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-5xl font-bold mb-16 text-slate-900">{t('achievements.title')}</h2>
 
