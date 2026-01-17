@@ -22,9 +22,10 @@
     },
     "about": {
         "title": "Sobre mí",
-        "intro": "Comencé mi carrera como desarrollador full-stack en 2008, trabajando con Java, PHP y .NET. Con más de 16 años de experiencia, he evolucionado hacia la arquitectura empresarial y el liderazgo técnico, descubrien­do que mi mayor impacto está en ayudar a los equipos a crear sistemas sólidos y escalables.",
-        "currentRole": "Actualmente, como Head of Engineering en Flight Centre Travel Group, lidero a más de 100 ingenieros en distintos mercados del mundo. Diseño plataformas cloud-native, impulso transformaciones organizativas y creo entornos donde la innovación y la excelencia tecnológica pueden crecer.",
-        "approach": "Mi enfoque combina profundidad técnica —microservicios, infraestructura cloud, seguridad y DevOps— con liderazgo estratégico orientado a alinear la ingeniería con los objetivos del negocio.",
+        "intro": "Mi trayectoria comenzó en 2008, cimentada en una doble formación en Informática y Administración de Empresas. Empezando como desarrollador full-stack, he evolucionado hasta convertirme en un líder de ingeniería con más de una década de experiencia escalando equipos globales y entregando tecnología crítica para el negocio. Mi carrera ha abarcado el desarrollo práctico, la arquitectura y el liderazgo ejecutivo, dándome tanto la profundidad técnica como la visión estratégica para alinear la ingeniería y el producto con los objetivos empresariales.",
+        "currentRole": "Actualmente, como Head of Engineering (y EMEA Systems Lead) en Flight Centre Travel Group, dirijo los pilares globales de Platform Services y Workflow. Lidero a más de 100 ingenieros en múltiples regiones, centrándome en construir arquitecturas resilientes y API-first, y habilitando sistemas seguros y escalables. En paralelo, ejerzo como CTO en el FCTG Tech Hub de Barcelona, actuando como referente técnico local.",
+        "approach": "Creo que un gran liderazgo en ingeniería trata de escuchar primero, ser proactivo y poner a las personas en el centro de la transformación. Mi enfoque combina una profunda experiencia técnica —desde microservicios y seguridad en la nube hasta DevOps— con una visión estratégica para el diseño organizacional. Me enorgullece empoderar a los equipos, impulsar la alineación cultural y crear entornos donde los ingenieros puedan prosperar mientras el negocio avanza más rápido y con mayor seguridad.",
+        "closing": "Siempre curioso y en constante aprendizaje, disfruto el desafío de unir tecnología y estrategia para definir el futuro.",
         "enterpriseArchitecture": {
             "title": "Arquitectura Empresarial",
             "description": "Especialización en microservicios, sistemas cloud-native, ecosistemas basados en APIs e infraestructura escalable"
@@ -36,6 +37,10 @@
         "platformTransformation": {
             "title": "Transformación de Plataformas",
             "description": "Migraciones a la nube, seguridad y cumplimiento (ISO27001, PCI DSS) y programas de modernización empresarial"
+        },
+        "leadershipPhilosophies": {
+            "title": "Filosofía de Liderazgo",
+            "description": "Liderazgo proactivo y centrado en las personas, arraigado en la empatía, la transparencia y la convicción de que los equipos empoderados impulsan los mejores resultados empresariales."
         }
     },
     "experience": {

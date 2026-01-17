@@ -22,9 +22,10 @@
     },
     "about": {
         "title": "About Me",
-        "intro": "My journey began as a full-stack developer in 2008, building applications across Java, PHP, and .NET. Over 16 years, I've progressively grown into enterprise architecture and technical leadership, realizing that my greatest impact comes from enabling teams to build exceptional systems.",
-        "currentRole": "Today, as Head of Engineering at Flight Centre Travel Group, I lead 100+ engineers across global markets. I architect cloud-native platforms, drive organizational transformations, and foster cultures where innovation and excellence thrive.",
-        "approach": "My approach merges hands-on technical depth—from microservices and cloud infrastructure to security and DevOps—with strategic leadership that aligns engineering excellence with business goals.",
+        "intro": "My journey began in 2008, grounded in a dual background of Computer Science and Business Management. Starting as a hands-on full-stack developer, I have evolved into an engineering leader with over a decade of experience scaling global teams and delivering business-critical technology. My career has spanned hands-on development, architecture, and executive leadership, giving me both the technical depth and the strategic vision to align engineering and product with business goals.",
+        "currentRole": "Currently, as Head of Engineering (and EMEA Systems Lead) at Flight Centre Travel Group, I direct the Platform Services and Workflow global pillars. I lead over 100 engineers across multiple regions, focusing on building resilient, API-first architectures and enabling secure, scalable systems. In parallel, I serve as CTO at the FCTG Tech Hub in Barcelona, acting as the local technical reference.",
+        "approach": "I believe great engineering leadership is about listening first, being proactive, and putting people at the centre of transformation. My approach merges deep technical expertise—from microservices and cloud security to DevOps—with a strategic vision for organizational design. I take pride in empowering teams, driving cultural alignment, and creating environments where engineers can thrive while the business moves faster and more securely.",
+        "closing": "Always curious and always learning, I enjoy the challenge of bridging technology and strategy to sharpen the future.",
         "enterpriseArchitecture": {
             "title": "Enterprise Architecture",
             "description": "Expertise in microservices, cloud-native systems, API-oriented ecosystems, and scalable infrastructure"
@@ -36,6 +37,10 @@
         "platformTransformation": {
             "title": "Platform Transformation",
             "description": "Cloud migrations, security & compliance at scale (ISO27001, PCI DSS), and enterprise-wide modernization initiatives"
+        },
+        "leadershipPhilosophies": {
+            "title": "Leadership Philosophies",
+            "description": "People-centric, proactive leadership rooted in empathy, transparency, and the belief that empowered teams drive the best business outcomes."
         }
     },
     "experience": {

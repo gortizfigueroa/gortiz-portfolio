@@ -1,4 +1,4 @@
-import { Code2, Users, TrendingUp, Globe } from 'lucide-react';
+import { Code2, Users, Globe, Lightbulb } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 export default function About() {
@@ -14,6 +14,7 @@ export default function About() {
             <p>{t('about.intro')}</p>
             <p>{t('about.currentRole')}</p>
             <p>{t('about.approach')}</p>
+            <p>{t('about.closing')}</p>
           </div>
 
           <div className="grid gap-6">
@@ -39,6 +40,14 @@ export default function About() {
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-2">{t('about.platformTransformation.title')}</h3>
               <p className="text-slate-700">{t('about.platformTransformation.description')}</p>
+            </div>
+
+            <div className="p-6 bg-indigo-50 rounded-2xl border border-indigo-100 hover:shadow-lg transition-shadow duration-300">
+              <div className="w-12 h-12 bg-indigo-500 rounded-xl flex items-center justify-center mb-4">
+                <Lightbulb className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 mb-2">{t('about.leadershipPhilosophies.title')}</h3>
+              <p className="text-slate-700">{t('about.leadershipPhilosophies.description')}</p>
             </div>
           </div>
         </div>
