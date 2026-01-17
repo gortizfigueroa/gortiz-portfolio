@@ -12,7 +12,13 @@
         "stackoverflow": "Stack Overflow",
         "credly": "Credly",
         "microsoftlearn": "Microsoft Learn",
-        "cv": "Descargar CV"
+        "cv": "Descargar CV",
+        "qr_code": "Código QR",
+        "scan_to_visit": "Escanea para Visitar",
+        "share": "Compartir",
+        "share_via": "Compartir vía",
+        "copy_link": "Copiar Enlace",
+        "copied": "¡Copiado!"
     },
     "about": {
         "title": "Sobre mí",

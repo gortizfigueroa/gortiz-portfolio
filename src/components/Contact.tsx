@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { Mail, Linkedin, MapPin, Globe, Phone } from 'lucide-react';
+import { APP_CONFIG } from '../config';
 
 export default function Contact() {
   const { t } = useTranslation();
@@ -51,7 +52,7 @@ export default function Contact() {
           </a>
 
           <a
-            href={t('contact.website.href')}
+            href={APP_CONFIG.websiteUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300 text-center group"
@@ -60,7 +61,7 @@ export default function Contact() {
               <Globe className="w-6 h-6" />
             </div>
             <h3 className="font-semibold mb-1">{t('contact.website.label')}</h3>
-            <p className="text-slate-300 text-sm">{t('contact.website.value')}</p>
+            <p className="text-slate-300 text-sm">{APP_CONFIG.websiteDisplay}</p>
           </a>
 
           <div className="p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 text-center">

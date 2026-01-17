@@ -1,11 +1,15 @@
-import { ArrowDown, Linkedin, Mail, Globe, Globe as GlobeIcon, FileText } from 'lucide-react';
+import { ArrowDown, Linkedin, Mail, Globe, Globe as GlobeIcon, FileText, Share2, X, Copy, Check, MessageCircle } from 'lucide-react';
+import QRCode from 'react-qr-code';
 import { useTranslation } from 'react-i18next';
 import { useState, useRef, useEffect } from 'react';
 import '../i18n'; // Import the i18n configuration
+import { APP_CONFIG } from '../config';
 
 export default function Hero() {
   const { t, i18n } = useTranslation();
   const [isDropdownOpen, setDropdownOpen] = useState(false);
+  const [isShareModalOpen, setIsShareModalOpen] = useState(false);
+  const [copied, setCopied] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   const changeLanguage = (lng: string) => {
@@ -52,6 +56,35 @@ export default function Hero() {
       <path d="M22 12.6001H12.5999V23.0001H22V12.6001ZM11.3999 23.0001H1.99988V12.6001H11.3999V23.0001ZM11.3999 1.00012H1.99988V11.4001H11.3999V1.00012ZM22 1.00012H12.5999V11.4001H22V1.00012Z" />
     </svg>
   );
+
+  const handleShare = async () => {
+    const shareData = {
+      title: 'Guillermo Ortiz - Head of Engineering',
+      text: 'Check out this portfolio!',
+      url: APP_CONFIG.websiteUrl
+    };
+
+    if (navigator.share) {
+      try {
+        await navigator.share(shareData);
+      } catch (err) {
+        console.log('Error sharing:', err);
+        setIsShareModalOpen(true);
+      }
+    } else {
+      setIsShareModalOpen(true);
+    }
+  };
+
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(APP_CONFIG.websiteUrl);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
+  const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(`Check out this portfolio: ${APP_CONFIG.websiteUrl}`)}`;
+  const mailtoUrl = `mailto:?subject=${encodeURIComponent('Guillermo Ortiz Portfolio')}&body=${encodeURIComponent(`Check out this portfolio: ${APP_CONFIG.websiteUrl}`)}`;
+  const linkedinUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(APP_CONFIG.websiteUrl)}`;
 
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden">
@@ -141,7 +174,7 @@ export default function Hero() {
                 <FileText className="w-5 h-5 sm:w-6 sm:h-6" />
               </a>
               <a
-                href="https://www.guillermoortiz.es"
+                href={APP_CONFIG.websiteUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2.5 sm:p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
@@ -196,6 +229,14 @@ export default function Hero() {
               >
                 <MicrosoftLearnIcon />
               </a>
+
+              <button
+                onClick={handleShare}
+                className="p-2.5 sm:p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110 cursor-pointer"
+                aria-label={t('hero.share')}
+              >
+                <Share2 className="w-5 h-5 sm:w-6 sm:h-6" />
+              </button>
             </div>
           </div>
         </div>
@@ -204,6 +245,66 @@ export default function Hero() {
       <div className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
         <ArrowDown className="w-5 h-5 sm:w-6 sm:h-6 text-slate-400" />
       </div>
-    </section>
+
+
+      {/* Share Modal */}
+      {isShareModalOpen && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fade-in" onClick={() => setIsShareModalOpen(false)}>
+          <div className="relative bg-white p-6 rounded-2xl shadow-xl max-w-sm w-full animate-scale-up" onClick={e => e.stopPropagation()}>
+            <button
+              onClick={() => setIsShareModalOpen(false)}
+              className="absolute top-4 right-4 p-1 text-slate-500 hover:text-slate-800 transition-colors"
+            >
+              <X className="w-6 h-6" />
+            </button>
+
+            <h3 className="text-xl font-bold text-slate-800 mb-6 text-center">{t('hero.share_via')}</h3>
+
+            <div className="grid grid-cols-4 gap-4 mb-6">
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2 group">
+                <div className="p-3 bg-green-100 rounded-full group-hover:bg-green-200 transition-colors">
+                  <MessageCircle className="w-6 h-6 text-green-600" />
+                </div>
+                <span className="text-xs text-slate-600">WhatsApp</span>
+              </a>
+
+              <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2 group">
+                <div className="p-3 bg-blue-100 rounded-full group-hover:bg-blue-200 transition-colors">
+                  <Linkedin className="w-6 h-6 text-blue-700" />
+                </div>
+                <span className="text-xs text-slate-600">LinkedIn</span>
+              </a>
+
+              <a href={mailtoUrl} className="flex flex-col items-center gap-2 group">
+                <div className="p-3 bg-slate-100 rounded-full group-hover:bg-slate-200 transition-colors">
+                  <Mail className="w-6 h-6 text-slate-700" />
+                </div>
+                <span className="text-xs text-slate-600">Email</span>
+              </a>
+
+              <button onClick={copyToClipboard} className="flex flex-col items-center gap-2 group">
+                <div className="p-3 bg-slate-100 rounded-full group-hover:bg-slate-200 transition-colors relative">
+                  {copied ? <Check className="w-6 h-6 text-green-600" /> : <Copy className="w-6 h-6 text-slate-700" />}
+                </div>
+                <span className="text-xs text-slate-600">{copied ? t('hero.copied') : t('hero.copy_link')}</span>
+              </button>
+            </div>
+
+            <div className="border-t border-slate-100 pt-6 flex flex-col items-center">
+              <p className="text-sm font-medium text-slate-500 mb-4">{t('hero.scan_to_visit')}</p>
+              <div className="p-3 bg-white rounded-xl shadow-inner border border-slate-100">
+                <QRCode
+                  value={APP_CONFIG.websiteUrl}
+                  size={120}
+                  style={{ height: "auto", maxWidth: "100%", width: "100%" }}
+                  viewBox={`0 0 256 256`}
+                />
+              </div>
+              <p className="mt-6 text-slate-500 text-sm font-medium">{APP_CONFIG.websiteDisplay}</p>
+            </div>
+          </div>
+        </div>
+      )}
+    </section >
   );
 }
