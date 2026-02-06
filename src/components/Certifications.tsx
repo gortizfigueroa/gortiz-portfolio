@@ -1,9 +1,9 @@
 import { useTranslation } from 'react-i18next';
-import { Layers, Cloudy, UserStar, BrainCircuit } from 'lucide-react';
+import { Layers, Cloudy, UserCheck, BrainCircuit } from 'lucide-react';
 
 const iconMap: Record<string, any> = {
 	Cloudy,
-	UserStar,
+	UserStar: UserCheck, // Mapping old key to new icon
 	BrainCircuit,
 	Layers
 };
@@ -12,7 +12,7 @@ export default function Certifications() {
 	const { t } = useTranslation();
 	const certifications = t('certifications.items', { returnObjects: true });
 	return (
-		<section className="py-24 px-6 bg-slate-50">
+		<section className="py-24 px-6 bg-white">
 			<div className="max-w-6xl mx-auto">
 				<h2 className="text-5xl font-bold mb-8 text-slate-900">{t('certifications.title')}</h2>
 

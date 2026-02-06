@@ -266,6 +266,35 @@
             }
         ]
     },
+    "sectors": {
+        "title": "Industries & Sectors",
+        "items": [
+            {
+                "name": "Travel & Tourism",
+                "icon": "Plane"
+            },
+            {
+                "name": "Consulting",
+                "icon": "Briefcase"
+            },
+            {
+                "name": "Retail & E-commerce",
+                "icon": "ShoppingBag"
+            },
+            {
+                "name": "Healthcare",
+                "icon": "HeartPulse"
+            },
+            {
+                "name": "Energy",
+                "icon": "Zap"
+            },
+            {
+                "name": "Telecom",
+                "icon": "Smartphone"
+            }
+        ]
+    },
     "languages": {
         "title": "Languages",
         "description": "Multilingual communication is a core asset for international leadership and cross‑functional collaboration. Native Spanish, fluent Catalan and English (business level) enable effective stakeholder engagement across Iberia and global teams. French and German are at a B1 conversational/intermediate level — suitable for technical collaboration, travel and day‑to‑day interactions.",

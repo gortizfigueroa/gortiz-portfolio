@@ -1,9 +1,9 @@
-import React from 'react';
 import { I18nextProvider } from 'react-i18next';
 import i18n from './i18n';
 import Hero from './components/Hero';
 import About from './components/About';
 import Experience from './components/Experience';
+import Sectors from './components/Sectors';
 import Education from './components/Education';
 import Certifications from './components/Certifications';
 import Skills from './components/Skills';
@@ -18,10 +18,11 @@ function App() {
       <Hero />
       <About />
       <Experience />
+      <Sectors />
       <Education />
       <Certifications />
-      <Skills />
       <Languages />
+      <Skills />
       <Achievements />
       <Contact />
     </I18nextProvider>

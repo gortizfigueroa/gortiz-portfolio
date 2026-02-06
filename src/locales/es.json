@@ -266,6 +266,35 @@
             }
         ]
     },
+    "sectors": {
+        "title": "Industries y Sectores",
+        "items": [
+            {
+                "name": "Turismo",
+                "icon": "Plane"
+            },
+            {
+                "name": "Consultoría",
+                "icon": "Briefcase"
+            },
+            {
+                "name": "Retail y E-commerce",
+                "icon": "ShoppingBag"
+            },
+            {
+                "name": "Salud",
+                "icon": "HeartPulse"
+            },
+            {
+                "name": "Energía",
+                "icon": "Zap"
+            },
+            {
+                "name": "Telecomunicaciones",
+                "icon": "Smartphone"
+            }
+        ]
+    },
     "languages": {
         "title": "Idiomas",
         "description": "La comunicación multilingüe es clave para el liderazgo internacional y la colaboración entre equipos. Español nativo, catalán fluido e inglés profesional permiten interactuar eficazmente con equipos en Iberia y a nivel global. Francés y alemán en nivel B1, adecuados para colaboración técnica e interacción diaria.",

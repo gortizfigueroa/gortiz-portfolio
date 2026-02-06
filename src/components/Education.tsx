@@ -21,7 +21,7 @@ export default function Education() {
     const education = t('education.items', { returnObjects: true }) as EducationItem[];
 
     return (
-        <section className="py-24 px-6 bg-white">
+        <section className="py-24 px-6 bg-slate-50">
             <div className="max-w-6xl mx-auto">
                 <h2 className="text-5xl font-bold mb-12 text-slate-900">{t('education.title')}</h2>
 
