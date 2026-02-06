@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { Plane, Briefcase, ShoppingBag, HeartPulse, Zap, Smartphone, Globe } from 'lucide-react';
+import { Plane, Briefcase, ShoppingBag, HeartPulse, Zap, Smartphone, Globe, Truck, GraduationCap, Landmark } from 'lucide-react';
 
 const iconMap: Record<string, any> = {
     Plane,
@@ -8,7 +8,10 @@ const iconMap: Record<string, any> = {
     HeartPulse,
     Zap,
     Smartphone,
-    Globe
+    Globe,
+    Truck,
+    GraduationCap,
+    Landmark
 };
 
 export default function Sectors() {
@@ -20,7 +23,7 @@ export default function Sectors() {
             <div className="max-w-6xl mx-auto">
                 <h2 className="text-5xl font-bold mb-16 text-slate-900">{t('sectors.title')}</h2>
 
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
                     {sectors.map((sector: any, index: number) => {
                         const Icon = iconMap[sector.icon] || Globe;
 

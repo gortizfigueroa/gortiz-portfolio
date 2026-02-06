@@ -267,10 +267,10 @@
         ]
     },
     "sectors": {
-        "title": "Industries y Sectores",
+        "title": "Industrias y Sectores",
         "items": [
             {
-                "name": "Turismo",
+                "name": "Turismo y Aviación",
                 "icon": "Plane"
             },
             {
@@ -282,16 +282,28 @@
                 "icon": "ShoppingBag"
             },
             {
-                "name": "Salud",
+                "name": "Salud y Farmacéutica",
                 "icon": "HeartPulse"
             },
             {
-                "name": "Energía",
+                "name": "Energía y Servicios",
                 "icon": "Zap"
             },
             {
                 "name": "Telecomunicaciones",
                 "icon": "Smartphone"
+            },
+            {
+                "name": "Logística y Transporte",
+                "icon": "Truck"
+            },
+            {
+                "name": "Educación",
+                "icon": "GraduationCap"
+            },
+            {
+                "name": "Sector Público",
+                "icon": "Landmark"
             }
         ]
     },

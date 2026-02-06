@@ -270,11 +270,11 @@
         "title": "Industries & Sectors",
         "items": [
             {
-                "name": "Travel & Tourism",
+                "name": "Travel & Aviation",
                 "icon": "Plane"
             },
             {
-                "name": "Consulting",
+                "name": "Consultancy",
                 "icon": "Briefcase"
             },
             {
@@ -282,16 +282,28 @@
                 "icon": "ShoppingBag"
             },
             {
-                "name": "Healthcare",
+                "name": "Healthcare & Pharma",
                 "icon": "HeartPulse"
             },
             {
-                "name": "Energy",
+                "name": "Energy & Utilities",
                 "icon": "Zap"
             },
             {
-                "name": "Telecom",
+                "name": "Telecommunications",
                 "icon": "Smartphone"
+            },
+            {
+                "name": "Logistics & Transport",
+                "icon": "Truck"
+            },
+            {
+                "name": "Education",
+                "icon": "GraduationCap"
+            },
+            {
+                "name": "Public Sector",
+                "icon": "Landmark"
             }
         ]
     },
