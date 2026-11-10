@@ -185,6 +185,23 @@ npm run build
 # Deploy the dist/ folder to your GitHub Pages branch
 ```
 
+### Kubernetes (`pck-cputeag`)
+
+Pushes to `main` build an nginx image, publish it to GHCR, and deploy it to the `portfolio` namespace. The Service is **ClusterIP only**: there is no public ingress, NodePort, or DNS exposure. See [deployment and rollback](docs/deployment.md).
+
+The full admin kubeconfig is stored in Infomaniak Public Cloud Barbican. GitHub Actions stores only the `OS_AUTH_URL`, `OS_REGION_NAME`, `OS_APPLICATION_CREDENTIAL_ID`, and `OS_APPLICATION_CREDENTIAL_SECRET` credentials used to retrieve it. The OpenStack credential is read-only and restricted to the one Barbican secret; the retrieved Kubernetes credential nevertheless has cluster-admin privileges.
+
+For local access, install `kubectl`, `python3`, `python-openstackclient`, and `python-barbicanclient`, then configure the `openstack` cloud in `~/.config/openstack/clouds.yaml` (mode `0600`). Run:
+
+```bash
+OS_CLOUD=openstack scripts/install-kubeconfig.sh --set-current
+kubectl --context pck-cputeag-admin@pck-cputeag get ns
+```
+
+The installer preserves unrelated config entries, backs up an existing config, validates the merged file, and installs it atomically. `scripts/fetch-kubeconfig.sh` prints the path of a private temporary file; its caller must delete that file and parent directory after use. The original admin kubeconfig is retained locally at `~/.kube/pck-cputeag.orig` (mode `0600`), outside this repository.
+
+> **Accepted credential-exposure risk:** during initial cluster setup, the current kubeconfig private key was printed into an AI assistant session transcript. The owner chose to retain this credential. Follow the [rotation runbook](docs/rotation.md) to replace it, and use the provider's revocation process if compromise is suspected.
+
 ## 📊 Performance Optimization
 
 - **Code Splitting** - Components are lazy-loadable

@@ -1,0 +1,127 @@
+name: Deploy portfolio
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    name: Check and build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm run build
+
+  publish:
+    name: Publish image
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: check
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    outputs:
+      image: ghcr.io/gortizfigueroa/gortiz-portfolio@${{ steps.publish.outputs.digest }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: docker/setup-buildx-action@v3
+      - uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - id: publish
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: true
+          tags: ghcr.io/gortizfigueroa/gortiz-portfolio:${{ github.sha }}
+
+  deploy:
+    name: Deploy to pck-cputeag
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: publish
+    runs-on: ubuntu-latest
+    concurrency:
+      group: deploy-portfolio
+      cancel-in-progress: false
+    env:
+      IMAGE: ${{ needs.publish.outputs.image }}
+      OS_AUTH_TYPE: v3applicationcredential
+      OS_AUTH_URL: ${{ secrets.OS_AUTH_URL }}
+      OS_REGION_NAME: ${{ secrets.OS_REGION_NAME }}
+      OS_APPLICATION_CREDENTIAL_ID: ${{ secrets.OS_APPLICATION_CREDENTIAL_ID }}
+      OS_APPLICATION_CREDENTIAL_SECRET: ${{ secrets.OS_APPLICATION_CREDENTIAL_SECRET }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install kubectl
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/bin"
+          version=v1.37.2
+          base="https://dl.k8s.io/release/$version/bin/linux/amd64"
+          curl -fsSL "$base/kubectl" -o "$RUNNER_TEMP/bin/kubectl"
+          curl -fsSL "$base/kubectl.sha256" -o "$RUNNER_TEMP/kubectl.sha256"
+          printf '%s  %s\n' "$(cat "$RUNNER_TEMP/kubectl.sha256")" "$RUNNER_TEMP/bin/kubectl" | sha256sum --check
+          chmod +x "$RUNNER_TEMP/bin/kubectl"
+          echo "$RUNNER_TEMP/bin" >> "$GITHUB_PATH"
+      - name: Install OpenStack CLI
+        run: |
+          set -euo pipefail
+          python3 -m venv "$RUNNER_TEMP/openstack-venv"
+          "$RUNNER_TEMP/openstack-venv/bin/pip" install --disable-pip-version-check \
+            python-openstackclient python-barbicanclient
+          echo "$RUNNER_TEMP/openstack-venv/bin" >> "$GITHUB_PATH"
+      - name: Deploy and verify
+        run: |
+          set -euo pipefail
+          workdir="$(mktemp -d "$RUNNER_TEMP/portfolio-deploy.XXXXXX")"
+          port_forward_pid=""
+          cleanup() {
+            if [[ -n "$port_forward_pid" ]]; then kill "$port_forward_pid" 2>/dev/null || true; fi
+            rm -rf "$workdir"
+          }
+          trap cleanup EXIT
+
+          fetched="$(scripts/fetch-kubeconfig.sh)"
+          export KUBECONFIG="$workdir/kubeconfig"
+          mv "$fetched" "$KUBECONFIG"
+          rmdir "$(dirname "$fetched")"
+          chmod 600 "$KUBECONFIG"
+
+          previous_image="$(kubectl -n portfolio get deployment portfolio \
+            -o jsonpath='{.spec.template.spec.containers[?(@.name=="portfolio")].image}' 2>/dev/null || true)"
+          if [[ -n "$previous_image" ]]; then printf 'Previous image: %s\n' "$previous_image"; fi
+
+          kubectl apply -f k8s/namespace.yaml
+          kubectl apply -f k8s/service.yaml
+          awk -v image="$IMAGE" '/^          image: / { $0 = "          image: " image } { print }' \
+            k8s/deployment.yaml | kubectl apply -f -
+          kubectl -n portfolio rollout status deployment/portfolio --timeout=180s
+
+          port="$(python3 -c 'import socket; s=socket.socket(); s.bind(("127.0.0.1", 0)); print(s.getsockname()[1]); s.close()')"
+          kubectl -n portfolio port-forward --address 127.0.0.1 "svc/portfolio" "$port:80" \
+            >"$workdir/port-forward.log" 2>&1 &
+          port_forward_pid=$!
+          for attempt in {1..30}; do
+            if curl -fsS "http://127.0.0.1:$port/" >/dev/null; then
+              echo "Deployment returned HTTP 200 through localhost port-forward"
+              exit 0
+            fi
+            sleep 1
+          done
+          cat "$workdir/port-forward.log"
+          echo "Deployment did not respond through localhost port-forward" >&2
+          exit 1

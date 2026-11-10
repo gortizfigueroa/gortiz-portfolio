@@ -21,3 +21,18 @@ dist-ssr
 *.sln
 *.sw?
 .env
+
+# OpenStack credentials
+*openrc.sh
+openrc.sh
+clouds.yaml
+clouds.yml
+
+# Kubernetes credentials and local configs
+*-kubeconfig
+*.kubeconfig
+kubeconfig
+.kube/
+
+# OpenSpec / agent local state (only change artifacts are tracked)
+.opencode/

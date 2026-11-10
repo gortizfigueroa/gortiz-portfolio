@@ -1,0 +1,29 @@
+node_modules
+dist
+dist-ssr
+.git
+.github
+.opencode
+openspec
+
+# Local tooling state
+.vscode
+.idea
+*.sw?
+
+# Secrets and credential material — never enter the build context
+*-kubeconfig
+*.kubeconfig
+kubeconfig
+.kube/
+.env
+.env.*
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
